@@ -2,27 +2,81 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/css/css.css" />
 		<title>ohmyfood</title>
+		<script
+			src="https://kit.fontawesome.com/61717e11f0.js"
+			crossorigin="anonymous"
+		></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,600;1,700;1,800;1,900&family=Work+Sans:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,600;1,700;1,800;1,900&family=Work+Sans:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/css/css.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
 	</head>
 	<body>
-		<header>Oh my food</header>
-		<section>Paris Belleville</section>
-		<section>
-			<h1>Réservez le menu qui vous convient</h1>
+		<header><h1>Oh my food</h1></header>
+		<section class="position">
+			<div class="position__icon">
+				<p>
+					<span class="material-icons">
+						<i class="fa-solid fa-location-dot"></i>
+					</span>
+				</p>
+			</div>
+			<div class="position__test">
+				<p>Paris, Belleville</p>
+			</div>
+		</section>
+		<section class="presentation">
+			<p>Réservez le menu qui vous convient</p>
 			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
 			<p><a href="#">Explorer nos restaurants</a></p>
 		</section>
 
-		<section>
+		<section class="fonctionnement">
 			<div>
 				<h2>Fonctionnement</h2>
 			</div>
-			<div><p>Choisissez un restaurant</p></div>
-			<div><p>Composez votre menu</p></div>
-			<div><p>Dégustez au restaurant</p></div>
+			<div class="step">
+				<p class="step__number">
+					<span class="centrage">1</span>
+				</p>
+				<p class="step__pic">
+					<i class="fas fa-mobile-alt fa-lg"></i>
+				</p>
+				<p class="step__text">Choisissez un restaurant</p>
+			</div>
+			<div class="step">
+				<p class="step__number">
+					<span class="centrage">2</span>
+				</p>
+				<p class="step__pic">
+					<i class="fas fa-list-ul"></i>
+				</p>
+				<p class="step__text">Composez votre menu</p>
+			</div>
+			<div class="step">
+				<p class="step__number">
+					<span class="centrage">3</span>
+				</p>
+				<p class="step__pic">
+					<i class="fas fa-store"></i>
+				</p>
+				<p class="step__text">Dégustez au restaurant</p>
+			</div>
 		</section>
 
 		<section>

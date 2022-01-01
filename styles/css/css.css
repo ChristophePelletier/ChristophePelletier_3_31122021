@@ -1,6 +1,122 @@
-/*Test*/
+/*variables*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   background-color: lightgoldenrodyellow;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+.position {
+  background-color: lightskyblue;
+}
+.position__icon {
+  background-color: pink;
+}
+.position__test {
+  background-color: lightgreen;
+}
+
+header {
+  height: 65px;
+  background-color: white;
+}
+header h1 {
+  font-size: 28px;
+  text-align: center;
+  padding-top: 18px;
+}
+
+/*fonctionnement*/
+.fonctionnement {
+  height: 440px;
+  background-color: white;
+}
+
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+  background-image: linear-gradient(to bottom, #eaeaea, #f6f6f6);
+  color: #0065fc;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  background-position: center top;
+}
+
+.presentation {
+  height: 290px;
+  background-color: #f6f6f6;
+}
+
+.step {
+  width: 350px;
+  height: 75px;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 30px/20px;
+  box-shadow: 6px 6px 12px #f6f6f6;
+  margin-bottom: 25px;
+}
+.step__number {
+  position: absolute;
+  width: 50px;
+  height: 75px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 75px;
+}
+.step__number .centrage {
+  color: white;
+  background-color: #9356dc;
+  margin-top: 15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step__pic {
+  background-color: yellow;
+  position: absolute;
+  width: 50px;
+  height: 75px;
+  left: 50px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 75px;
+}
+.step__pic i {
+  color: #f6f6f6;
+  margin-top: 15px;
+}
+.step__text {
+  position: absolute;
+  width: 250px;
+  height: 75px;
+  left: 100px;
+  top: 0;
+  margin: 0;
+  padding: 2px 0 0 0;
+  line-height: 75px;
 }
 
 /*# sourceMappingURL=css.css.map */
