@@ -1,11 +1,35 @@
 .search-button {
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: relative;
+	display: block;
 	width: 220px;
 	height: 50px;
 	background: linear-gradient(180deg, $secondary-color, $primary-color);
 	border-radius: 25px;
+	p {
+		color: white;
+		position: absolute;
+		z-index: 100;
+	}
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+		opacity: 0;
+		border-radius: 25px;
+		transition: opacity 2s;
+		background: linear-gradient(
+			180deg,
+			darken($secondary-color, 30%),
+			darken($primary-color, 30%)
+		);
+	}
 }

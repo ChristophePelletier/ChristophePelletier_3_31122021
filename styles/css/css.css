@@ -17,6 +17,15 @@ body {
   margin-right: auto;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -29,15 +38,33 @@ h2 {
 }
 
 .search-button {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: block;
   width: 220px;
   height: 50px;
   background: linear-gradient(180deg, #ff79da, #9356dc);
   border-radius: 25px;
+}
+.search-button p {
+  color: white;
+  position: absolute;
+  z-index: 100;
+}
+.search-button:hover::after {
+  opacity: 1;
+}
+.search-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  border-radius: 25px;
+  transition: opacity 2s;
+  background: linear-gradient(180deg, #df00a1, #481a7f);
 }
 
 header {
@@ -67,12 +94,27 @@ header h1 {
 }
 .location__text {
   padding: 5px 25px 5px 10px;
+  font-weight: 500;
 }
 
 .presentation {
   height: 290px;
   padding-top: 40px;
   background-color: #f6f6f6;
+}
+
+.presentation h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 26px;
+  padding: 0 40px 20px 40px;
+}
+
+.presentation h1 + p {
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .fonctionnement {

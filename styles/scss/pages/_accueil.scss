@@ -14,6 +14,7 @@
 	}
 	&__text {
 		padding: 5px 25px 5px 10px;
+		font-weight:500;
 	}
 }
 
@@ -23,6 +24,16 @@
 	background-color: $neutral;
 }
 
+.presentation h1
+{font-family:Roboto, sans-serif; font-weight:800;
+text-align:center;
+font-size:26px;
+padding:0 40px 20px 40px;}
+
+.presentation h1 +p
+{font-size:19px;
+font-weight:300;
+text-align:center;}
 .fonctionnement {
 	height: 440px;
 	padding-top: 53px;
