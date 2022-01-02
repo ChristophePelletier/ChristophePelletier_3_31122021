@@ -1,8 +1,13 @@
-/*variables*/
+/*fonctionnement*/
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -14,19 +19,25 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
-h2 {
+h1 {
   font-family: "Shrikhand", sans-serif;
 }
 
-.position {
-  background-color: lightskyblue;
+h2 {
+  padding-left: 20px;
+  font-weight: 700;
 }
-.position__icon {
-  background-color: pink;
-}
-.position__test {
-  background-color: lightgreen;
+
+.search-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 50px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  border-radius: 25px;
 }
 
 header {
@@ -39,42 +50,50 @@ header h1 {
   padding-top: 18px;
 }
 
-/*fonctionnement*/
-.fonctionnement {
-  height: 440px;
-  background-color: white;
-}
-
-.position {
+.location {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   background-color: #eaeaea;
-  background-image: linear-gradient(to bottom, #eaeaea, #f6f6f6);
-  color: #0065fc;
+  background-image: linear-gradient(to bottom, #cecece, #eaeaea);
+  color: black;
   background-repeat: no-repeat;
-  background-size: 100% 3px;
+  background-size: 100% 5px;
   background-position: center top;
+}
+.location__icon {
+  padding: 5px;
+}
+.location__text {
+  padding: 5px 25px 5px 10px;
 }
 
 .presentation {
   height: 290px;
+  padding-top: 40px;
   background-color: #f6f6f6;
 }
 
+.fonctionnement {
+  height: 440px;
+  padding-top: 53px;
+  background-color: white;
+}
+
 .step {
-  width: 350px;
+  width: 330px;
   height: 75px;
   position: relative;
   background-color: #f6f6f6;
   border-radius: 30px/20px;
-  box-shadow: 6px 6px 12px #f6f6f6;
-  margin-bottom: 25px;
+  box-shadow: 6px 6px 12px #eaeaea;
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 .step__number {
   position: absolute;
-  width: 50px;
+  width: 35px;
   height: 75px;
   top: 0;
   left: 0;
@@ -85,7 +104,8 @@ header h1 {
 .step__number .centrage {
   color: white;
   background-color: #9356dc;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-left: -13px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -94,29 +114,91 @@ header h1 {
   align-items: center;
 }
 .step__pic {
-  background-color: yellow;
   position: absolute;
-  width: 50px;
+  width: 40px;
   height: 75px;
-  left: 50px;
+  left: 35px;
   top: 0;
   margin: 0;
   padding: 0;
   line-height: 75px;
 }
 .step__pic i {
-  color: #f6f6f6;
+  color: #7e7e7e;
   margin-top: 15px;
 }
 .step__text {
   position: absolute;
-  width: 250px;
+  width: 255px;
   height: 75px;
-  left: 100px;
+  left: 75px;
   top: 0;
   margin: 0;
   padding: 2px 0 0 0;
   line-height: 75px;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+
+.card {
+  box-shadow: 6px 6px 12px #eaeaea;
+  display: flex;
+  border-radius: 15px;
+  flex-direction: column;
+  background-color: white;
+  width: 335px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card img {
+  width: 335px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card__image {
+  position: relative;
+}
+.card__image p {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 10;
+  height: 30px;
+  width: 80px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: #99e2d0;
+}
+.card__text {
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.card__text__like {
+  position: relative;
+  z-index: 1;
+  color: #7e7e7e;
+  position: relative;
+}
+.card__text__like:hover > p:first-child {
+  opacity: 0;
+  transition: opacity 2s;
+}
+.card__text__like:hover .card__text__like--fill {
+  opacity: 1;
+}
+.card__text__like--fill {
+  position: absolute;
+  color: #9356dc;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 2s;
 }
 
 /*# sourceMappingURL=css.css.map */
