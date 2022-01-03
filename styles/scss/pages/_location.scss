@@ -1,0 +1,19 @@
+.location {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	background-color: $neutral-intermediary;
+	background-image: linear-gradient(to bottom, #cecece, $neutral-intermediary);
+	color: black;
+	background-repeat: no-repeat;
+	background-size: 100% 5px;
+	background-position: center top;
+	&__icon {
+		padding: 5px;
+	}
+	&__text {
+		padding: 5px 25px 5px 10px;
+		font-weight: 500;
+	}
+}

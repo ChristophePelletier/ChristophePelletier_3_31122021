@@ -20,7 +20,8 @@
 		<link rel="stylesheet" href="styles/css/css.css" />
 	</head>
 	<body>
-		<header><img src="images/logo/ohmyfood@2x.svg"alt="ohmyfood"></header>
+		<header><img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood" /></header>
+
 		<section class="location">
 			<div class="location__icon">
 				<p>
@@ -38,7 +39,7 @@
 			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
 
 			<a class="btn" href="#">
-				<p><span class="text">Explorer nos restaurants<span></p>
+				<p><span class="text">Explorer nos restaurants</span></p>
 			</a>
 		</section>
 
@@ -60,7 +61,7 @@
 					<span class="centrage">2</span>
 				</p>
 				<p class="step__pic">
-					<i class="fas fa-list-ul"></i>
+					<i class="fas fa-list-ul fa-lg"></i>
 				</p>
 				<p class="step__text">Composez votre menu</p>
 			</div>
@@ -69,7 +70,7 @@
 					<span class="centrage">3</span>
 				</p>
 				<p class="step__pic">
-					<i class="fas fa-store"></i>
+					<i class="fas fa-store fa-lg"></i>
 				</p>
 				<p class="step__text">Dégustez au restaurant</p>
 			</div>
@@ -81,37 +82,61 @@
 			</div>
 			<div class="card">
 				<div class="card__image">
+					<a href="#">
 						<img
 							src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
 							alt="La palette du goût"
 						/>
-					<p>Nouveau</p>
+						<p>Nouveau</p>
+					</a>
 				</div>
 				<div class="card__text">
-					<div>	
+					<a href="#">
+						<div>
 							<p>La palette du goût</p>
 							<p>Ménilmontant</p>
-					</div>
-					<a href="#">
-						<div class="card__text__like">
-							<p style="width: 25px; height: 25px">
-								<i class="far fa-heart fa-lg"></i>
-							</p>
-							<div class="card__text__like--fill">
-								<p style="width: 25px; height: 25px">
-									<i class="fas fa-heart fa-lg"></i>
-								</p>
-							</div>
 						</div>
 					</a>
+
+					<div class="card__text__like">
+						<p>
+							<object
+								class="red"
+								data="images/heart-regular.svg"
+								width="20"
+								height="20"
+								type="image/svg+xml"
+							></object>
+							<!--<i class="far fa-heart fa-lg"></i>-->
+						</p>
+						<div class="card__text__like--fill">
+							<p>
+								<object
+									class="red"
+									data="images/heart-solid.svg"
+									width="20"
+									height="20"
+									type="image/svg+xml"
+								></object>
+								<!--<img src="images/heart-regular.svg" />
+								<i class="fas fa-heart fa-lg bb"></i>-->
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<footer>
 			<p>ohmyfood</p>
 			<ul>
-				<li>Proposer un restaurant</li>
-				<li>Devenir propriétaire</li>
+				<li>
+					<span class="test"><i class="fa-solid fa-utensils"></i></span>Proposer
+					un restaurant
+				</li>
+				<li>
+					<span class="test"><i class="fa-solid fa-handshake-angle"></i></span
+					>Devenir partenaire
+				</li>
 				<li>Mentions légales</li>
 				<li>Contact</li>
 			</ul>
