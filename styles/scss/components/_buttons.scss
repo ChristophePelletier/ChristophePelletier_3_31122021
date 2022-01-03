@@ -1,14 +1,22 @@
-.search-button {
+.btn {
 	position: relative;
 	display: block;
 	width: 220px;
 	height: 50px;
 	background: linear-gradient(180deg, $secondary-color, $primary-color);
 	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto;
 	p {
 		color: white;
-		position: absolute;
-		z-index: 100;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50px;
+		.text {
+			position: absolute;
+			z-index: 100;
+		}
 	}
 	&:hover {
 		&::after {
@@ -28,8 +36,8 @@
 		transition: opacity 2s;
 		background: linear-gradient(
 			180deg,
-			darken($secondary-color, 30%),
-			darken($primary-color, 30%)
+			darken($secondary-color, 20%),
+			darken($primary-color, 20%)
 		);
 	}
 }

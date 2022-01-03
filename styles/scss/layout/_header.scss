@@ -1,7 +1,11 @@
 header {
 	height: 65px;
 	background-color: white;
-    h1{font-size:28px;
-    text-align:center;
-padding-top:18px}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		width: 150px;
+		padding-top: 15px;
+	}
 }

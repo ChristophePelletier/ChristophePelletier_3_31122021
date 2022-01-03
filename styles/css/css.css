@@ -28,32 +28,36 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-family: "Shrikhand", sans-serif;
-}
-
 h2 {
   padding-left: 20px;
   font-weight: 700;
 }
 
-.search-button {
+.btn {
   position: relative;
   display: block;
   width: 220px;
   height: 50px;
   background: linear-gradient(180deg, #ff79da, #9356dc);
   border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.search-button p {
+.btn p {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.btn p .text {
   position: absolute;
   z-index: 100;
 }
-.search-button:hover::after {
+.btn:hover::after {
   opacity: 1;
 }
-.search-button::after {
+.btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -64,17 +68,19 @@ h2 {
   opacity: 0;
   border-radius: 25px;
   transition: opacity 2s;
-  background: linear-gradient(180deg, #df00a1, #481a7f);
+  background: linear-gradient(180deg, #ff13be, #6023a9);
 }
 
 header {
   height: 65px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-header h1 {
-  font-size: 28px;
-  text-align: center;
-  padding-top: 18px;
+header img {
+  width: 150px;
+  padding-top: 15px;
 }
 
 .location {
@@ -107,20 +113,25 @@ header h1 {
   font-family: Roboto, sans-serif;
   font-weight: 800;
   text-align: center;
-  font-size: 26px;
-  padding: 0 40px 20px 40px;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 0 55px 10px 55px;
 }
 
 .presentation h1 + p {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 300;
+  padding-bottom: 30px;
   text-align: center;
 }
 
 .fonctionnement {
   height: 440px;
-  padding-top: 53px;
+  padding-top: 50px;
   background-color: white;
+}
+.fonctionnement h2 {
+  padding-bottom: 30px;
 }
 
 .step {
