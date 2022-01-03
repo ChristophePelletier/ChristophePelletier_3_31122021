@@ -1,0 +1,19 @@
+.presentation {
+	height: 290px;
+	padding-top: 40px;
+	background-color: $neutral;
+}
+.presentation h1 {
+	font-family: Roboto, sans-serif;
+	font-weight: 800;
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	padding: 0 55px 10px 55px;
+}
+.presentation h1 + p {
+	font-size: 18px;
+	font-weight: 300;
+	padding-bottom: 30px;
+	text-align: center;
+}

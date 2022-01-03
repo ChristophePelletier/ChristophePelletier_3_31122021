@@ -1,0 +1,36 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: $neutral-deep-dark;
+	padding: 27px;
+	height: 195px;
+	color: white;
+	p {
+		font-family: "Shrikhand", cursive;
+		padding-bottom: 20px;
+	}
+	ul {
+		padding-bottom: 8px;
+		font-size: 14px;
+
+		li {
+			padding-bottom: 8px;
+			&:nth-child(1) {
+				position: relative;
+				padding-left: 25px;
+				.test {
+					position: absolute;
+					left: 0;
+				}
+			}
+            &:nth-child(2) {
+				position: relative;
+				padding-left: 25px;
+				.test {
+					position: absolute;
+					left: 0;
+				}
+			}
+		}
+	}
+}

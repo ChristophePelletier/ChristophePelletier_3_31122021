@@ -1,4 +1,6 @@
+/*mobile*/
 /*fonctionnement*/
+/*cards*/
 *,
 *::after,
 *::before {
@@ -11,7 +13,6 @@
 }
 
 body {
-  background-color: lightgoldenrodyellow;
   max-width: 375px;
   margin-left: auto;
   margin-right: auto;
@@ -26,11 +27,24 @@ a:hover {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 h2 {
   padding-left: 20px;
   font-weight: 700;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding-top: 60px;
+}
+.restaurants h2 {
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .btn {
@@ -42,6 +56,7 @@ h2 {
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
+  /*@include shadow($neutral);*/
 }
 .btn p {
   color: white;
@@ -83,46 +98,40 @@ header img {
   padding-top: 15px;
 }
 
-.location {
+footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: #eaeaea;
-  background-image: linear-gradient(to bottom, #cecece, #eaeaea);
-  color: black;
-  background-repeat: no-repeat;
-  background-size: 100% 5px;
-  background-position: center top;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 27px;
+  height: 195px;
+  color: white;
 }
-.location__icon {
-  padding: 5px;
+footer p {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 20px;
 }
-.location__text {
-  padding: 5px 25px 5px 10px;
-  font-weight: 500;
+footer ul {
+  padding-bottom: 8px;
+  font-size: 14px;
 }
-
-.presentation {
-  height: 290px;
-  padding-top: 40px;
-  background-color: #f6f6f6;
+footer ul li {
+  padding-bottom: 8px;
 }
-
-.presentation h1 {
-  font-family: Roboto, sans-serif;
-  font-weight: 800;
-  text-align: center;
-  font-size: 22px;
-  line-height: 26px;
-  padding: 0 55px 10px 55px;
+footer ul li:nth-child(1) {
+  position: relative;
+  padding-left: 25px;
 }
-
-.presentation h1 + p {
-  font-size: 18px;
-  font-weight: 300;
-  padding-bottom: 30px;
-  text-align: center;
+footer ul li:nth-child(1) .test {
+  position: absolute;
+  left: 0;
+}
+footer ul li:nth-child(2) {
+  position: relative;
+  padding-left: 25px;
+}
+footer ul li:nth-child(2) .test {
+  position: absolute;
+  left: 0;
 }
 
 .fonctionnement {
@@ -140,7 +149,7 @@ header img {
   position: relative;
   background-color: #f6f6f6;
   border-radius: 30px/20px;
-  box-shadow: 6px 6px 12px #eaeaea;
+  /*@include shadow(white);*/
   margin-left: 30px;
   margin-bottom: 20px;
 }
@@ -191,19 +200,57 @@ header img {
   line-height: 75px;
 }
 
-.restaurants {
+.presentation {
+  height: 290px;
+  padding-top: 40px;
   background-color: #f6f6f6;
 }
 
-.card {
-  box-shadow: 6px 6px 12px #eaeaea;
+.presentation h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 22px;
+  line-height: 26px;
+  padding: 0 55px 10px 55px;
+}
+
+.presentation h1 + p {
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.location {
   display: flex;
-  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+  background-image: linear-gradient(to bottom, #cecece, #eaeaea);
+  color: black;
+  background-repeat: no-repeat;
+  background-size: 100% 5px;
+  background-position: center top;
+}
+.location__icon {
+  padding: 5px;
+}
+.location__text {
+  padding: 5px 25px 5px 10px;
+  font-weight: 500;
+}
+
+.card {
+  display: flex;
   flex-direction: column;
-  background-color: white;
+  height: 255px;
   width: 335px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px #aaaaaa;
 }
 .card img {
   width: 335px;
@@ -227,31 +274,57 @@ header img {
 }
 .card__text {
   display: flex;
-  height: 75px;
-  justify-content: space-between;
-  flex-direction: row;
+  align-items: flex-start;
+  height: 80px;
+}
+.card__text a:first-child > div {
+  width: 335px;
+  height: 80px;
+  padding-top: 10px;
+}
+.card__text a:first-child > div p:first-child {
+  font-weight: bold;
+  padding-bottom: 4px;
+  padding-left: 15px;
+}
+.card__text a:first-child > div p:nth-child(2) {
+  padding-left: 15px;
 }
 .card__text__like {
   position: relative;
+  top: 15px;
+  margin-left: -55px;
   z-index: 1;
-  color: #7e7e7e;
-  position: relative;
-}
-.card__text__like:hover > p:first-child {
-  opacity: 0;
-  transition: opacity 2s;
+  height: 25px;
+  width: 29px;
 }
 .card__text__like:hover .card__text__like--fill {
   opacity: 1;
+  cursor: pointer;
 }
 .card__text__like--fill {
   position: absolute;
-  color: #9356dc;
   top: 0;
   right: 0;
+  left: 0;
+  bottom: 0;
   opacity: 0;
-  z-index: -1;
-  transition: opacity 2s;
+  z-index: 10;
+  transition: opacity 2s linear;
+  height: 20px;
+  width: 20px;
+  /*background-image: url("heart-full.png");
+  background-repeat: no-repeat;*/
 }
+
+.red {
+  stroke: red;
+  fill: currentColor;
+}
+
+/*
+.bb {
+	background: -webkit-linear-gradient(red, green);
+}*/
 
 /*# sourceMappingURL=css.css.map */
