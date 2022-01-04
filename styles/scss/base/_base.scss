@@ -14,7 +14,7 @@ body {
 	margin-right: auto;
 	padding: 0;
 	font-family: "Roboto", sans-serif;
-	color:black;
+	color: black;
 }
 
 a:hover {
@@ -23,7 +23,7 @@ a:hover {
 
 a {
 	text-decoration: none;
-	color:black;
+	color: black;
 }
 
 h2 {
@@ -34,6 +34,7 @@ h2 {
 .restaurants {
 	background-color: $neutral;
 	padding-top: 60px;
+	padding-bottom: 65px;
 	h2 {
 		padding-bottom: 30px;
 	}
