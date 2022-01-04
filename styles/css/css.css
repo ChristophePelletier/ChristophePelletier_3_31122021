@@ -397,15 +397,21 @@ footer ul li:nth-child(2) .test {
 }*/
 .meal::after {
   content: "";
-  background-color: greenyellow;
+  background-color: #99e2d0;
   z-index: 100;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 15px;
   z-index: 10;
-  width: 60px;
+  width: 0;
   height: 70px;
   border-radius: 0 15px 15px 0;
+  transition: all 2s ease-in-out;
+  transform-origin: right;
+}
+
+.menu:hover .meal::after {
+  width: 55px;
 }
 
 .test {
