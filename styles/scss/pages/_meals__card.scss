@@ -1,7 +1,7 @@
 .meal::after {
 	content: "";
 	background-color: #99e2d0;
-	z-index: 100;
+	z-index: 1;
 	position: absolute;
 	top: 0;
 	right: 15px;
@@ -16,10 +16,23 @@
 	width: 55px;
 }
 
+p.rond {
+    position:relative;
+    left:50px;
+	top: -10px;
+	margin-left: 1px;
+	transform: translateX(0) rotate(360deg);
+	z-index: 100;
+	transition: all 2s ease-in-out;
+	transform-origin: 50% 50%;
+}
 
-
+.menu:hover p.rond {
+	transform: translateX(-50px);
+}
 .test {
 	position: relative;
+	overflow: hidden;
 }
 
 .meal {
@@ -36,6 +49,7 @@
 	transition: all 2s ease-in-out;
 	transform-origin: top left;
 	background-color: lemonchiffon;
+	overflow: hidden;
 }
 
 .meal__name {
