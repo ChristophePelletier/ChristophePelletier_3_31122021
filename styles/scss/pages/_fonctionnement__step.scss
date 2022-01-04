@@ -11,9 +11,10 @@
 	width: $step-width;
 	height: $step-height;
 	position: relative;
+	z-index: 1;
 	background-color: $neutral;
 	border-radius: 30px/20px;
-	/*@include shadow(white);*/
+	@include shadow(white);
 	margin-left: 30px;
 	margin-bottom: 20px;
 	&__number {
@@ -62,4 +63,48 @@
 		padding: 2px 0 0 0;
 		line-height: $step-height;
 	}
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: 30px/20px;
+		background-color: lighten($primary-color, 32%);
+		@include shadow($neutral-intermediary);
+		opacity: 0;
+		z-index: -1;
+		transition: opacity 1250ms ease-in-out;
+	}
+}
+/*
+.step:hover p i {
+	color: red;
+}
+*/
+.step:hover p.step__pic::after {opacity:1;}
+
+
+p.step__pic::after {
+	content: url(mobile-screen-button-solid-2.svg);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 30px/20px;
+	opacity: 0;
+	z-index: 11;
+	transition: opacity 1250ms ease-in-out;
+}
+
+p.step__pic
+{
+	height:15px;
 }
