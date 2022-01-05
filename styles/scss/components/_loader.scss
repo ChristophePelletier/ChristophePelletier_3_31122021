@@ -1,0 +1,77 @@
+.loader {
+	position: absolute;
+	width: 300px;
+	height: 28px;
+	background-color: $secondary-color;
+	overflow: hidden;
+	.ohmyfood {
+		position: relative;
+		top: -22px;
+		left: 0;
+		height: 15px;
+		width: 35px;
+		background-color: $tertiary-color;
+		z-index: 20;
+		animation: deplacement 3s ease-in-out;
+		transform-origin: left;
+	}
+
+	&__inner {
+		position: relative;
+		background-color: $primary-color;
+		width: 300px;
+		height: 28px;
+		z-index: -5;
+		animation: fill 3s ease-in-out;
+		transform-origin: left;
+		z-index: 10;
+	}
+}
+
+@keyframes fill {
+	0% {
+		transform: scaleX(0);
+	}
+	10% {
+		transform: scaleX($scale10pct);
+	}
+	20% {
+		transform: scaleX($scale20pct);
+	}
+	50% {
+		transform: scaleX($scale50pct);
+	}
+	80% {
+		transform: scaleX($scale80pct);
+	}
+	90% {
+		transform: scaleX($scale90pct);
+	}
+	100% {
+		transform: scaleX($scale100pct);
+	}
+}
+
+@keyframes deplacement {
+	0% {
+		transform: translateX(-40px) scaleX(100%);
+	}
+	10% {
+		transform: translateX(-5px);
+	}
+	20% {
+		transform: translateX(10px) scaleX(100%);
+	}
+	50% {
+		transform: translateX(25px) scaleX(150%);
+	}
+	80% {
+		transform: translateX(200px) scaleX(100%);
+	}
+	90% {
+		transform: translateX(300px) scaleX(100%);
+	}
+	100% {
+		transform: translateX(300px);
+	}
+}

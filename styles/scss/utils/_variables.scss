@@ -20,3 +20,12 @@ $step-width: ($step__number-width + $step__pic-width + $step__text-width);
 $card-image-height: 175px;
 $card-text-height: 80px;
 $card-height: $card-image-height + $card-text-height;
+
+/*loader*/
+$scale0pct: 0%;
+$scale10pct: 2%;
+$scale20pct: 8%;
+$scale50pct: 30%;
+$scale80pct: 70%;
+$scale90pct: 87%;
+$scale100pct: 100%;
