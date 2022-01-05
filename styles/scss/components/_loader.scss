@@ -1,31 +1,62 @@
 .loader {
 	position: absolute;
-	width: 300px;
-	height: 28px;
+	width: 350px;
+	height: 80px;
 	background-color: $secondary-color;
 	overflow: hidden;
+	border-radius: 15px;
+	@include shadow($neutral-dark);
 	.ohmyfood {
 		position: relative;
-		top: -22px;
-		left: 0;
-		height: 15px;
-		width: 35px;
+		top: -40px;
+		left: -80px;
+		padding-top: 8px;
+		height: 40px;
+		width: 80px;
 		background-color: $tertiary-color;
 		z-index: 20;
-		animation: deplacement 3s ease-in-out;
+		animation: deplacement 3s ease-in-out both;
 		transform-origin: left;
+		font-family: "Shrikhand", cursive;
+		font-size: 13px;
+		text-align: center;
 	}
-
+	.ohmyfood-2 {
+		position: relative;
+		top: -80px;
+		left: -80px;
+		padding-left: 5px;
+		padding-top: 8px;
+		height: 40px;
+		width: 80px;
+		z-index: 20;
+		animation: deplacement2 3s ease-in-out both;
+		transform-origin: left;
+		font-family: "Shrikhand", cursive;
+		font-size: 13px;
+		text-align: center;
+	}
 	&__inner {
 		position: relative;
 		background-color: $primary-color;
-		width: 300px;
-		height: 28px;
+		width: 350px;
+		height: 80px;
 		z-index: -5;
-		animation: fill 3s ease-in-out;
+		animation: fill 3s ease-in-out both;
 		transform-origin: left;
 		z-index: 10;
 	}
+}
+
+.poursuivant {
+	z-index: 20;
+	position: relative;
+	top: -110px;
+	left: -280px;
+	color: $tertiary-color;
+	transform-origin: 50% 50%;
+	text-align: center;
+	animation: deplacement3 3s ease-in-out both;
 }
 
 @keyframes fill {
@@ -63,15 +94,63 @@
 		transform: translateX(10px) scaleX(100%);
 	}
 	50% {
-		transform: translateX(25px) scaleX(150%);
+		transform: translateX(25px) scaleX(100%);
 	}
 	80% {
-		transform: translateX(200px) scaleX(100%);
+		transform: translateX(200px) scaleX(180%);
 	}
 	90% {
 		transform: translateX(300px) scaleX(100%);
 	}
 	100% {
+		transform: translateX(350px);
+	}
+}
+
+@keyframes deplacement2 {
+	0% {
+		transform: translateX(-40px);
+	}
+	10% {
+		transform: translateX(-5px);
+	}
+	20% {
+		transform: translateX(10px);
+	}
+	50% {
+		transform: translateX(25px);
+	}
+	80% {
+		transform: translateX(200px);
+	}
+	90% {
 		transform: translateX(300px);
+	}
+	100% {
+		transform: translateX(350px);
+	}
+}
+
+@keyframes deplacement3 {
+	0% {
+		transform: rotate(0) translateX(-40px) scale(1);
+	}
+	10% {
+		transform: rotate(0) translateX(-5px);
+	}
+	20% {
+		transform: translateX(10px);
+	}
+	50% {
+		transform: translateX(15px);
+	}
+	80% {
+		transform: translateX(170px);
+	}
+	90% {
+		transform: translateX(280px);
+	}
+	100% {
+		transform: rotate(720deg) translateX(350px) scale(2);
 	}
 }
