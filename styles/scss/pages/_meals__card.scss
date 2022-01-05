@@ -5,6 +5,9 @@
 	height: 70px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 15px;
+	@include shadow(white);
+	border-radius: 15px;
 }
 .dish-card__inner {
 	display: flex;
@@ -14,101 +17,87 @@
 	height: 70px;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 15px;
-	@include shadow(white);
 	transform-origin: top left;
 	overflow: hidden;
 	background-color: #99e2d0;
 	&__name {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		width: 285px;
 		height: 70px;
-		background-color: pink;
+		background-color: white;
 		&__title {
-			height: 35px;
-			background-color: maroon;
+			height: 70px;
+			padding-top: 12px;
+			padding-left: 10px;
+			font-size: 16px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: normal;
+			width: 262px;
+			transform-origin: left;
+			transition: all 2s;
 		}
 		&__description {
-			height: 35px;
-			background-color: mediumslateblue;
+			height: 70px;
+			padding-left: 10px;
+			padding-bottom:5px;
+			font-size: 13px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: normal;
+			width: 262px;
+			transform-origin: left;
+			transition: all 2s;
 		}
 	}
-	&__price-and-check {
+	&__price {
 		display: flex;
 		flex-direction: column;
 		width: 60px;
 		height: 70px;
-		transition: all 2s ease-in-out;
-		transform-origin: top left;
+		@include transition-dish-card;
+		transform-origin: $tertiary-color;
+		&--empty {
+			height: 35px;
+			background-color: white;
+		}
+		&__euros {
+			height: 35px;
+			background-color: white;
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+	&--check {
+		height: 0;
+		width: 0;
 		background-color: red;
-		&--check i {
-			background-color: green;
+		position: relative;
+		i {
 			position: relative;
-			left: 70px;
-			top: 25px;
-			transform: rotate(0);
-			z-index: 100;
+			color: white;
+			left: 18px;
+			top: 26px;
+			transform: translate(0) rotate(0);
+			z-index: 1000;
 			@include transition-dish-card;
 			transform-origin: 50% 50%;
-			background-color: deepskyblue;
-		}
-		&__price {
-			height: 35px;
-			background-color: moccasin;
 		}
 	}
-	&:hover .dish-card__inner--circle-check {
-		transform: translateX(-60px);
+	&:hover .dish-card__inner__price {
+		transform: translgateX(-60px);
 	}
-	&:hover .dish-card__inner__price-and-check {
-		transform: translateX(-60px);
-	}
-	/*
-	&::after {
-		content: "";
-		background-color: #99e2d0;
-		z-index: 100;
-		display: block;
-		position: relative;
-		top: 0;
-		right: -150px;
-		z-index: 10;
-		width: 250px;
-		height: 70px;
-		border-radius: 0 15px 15px 0;
-		opacity: 50;
-	}*/
 }
-.dish-card__inner:hover .dish-card__inner__price-and-check--check i {
-	transform: rotate(360deg);
-}
-.dish-card__inner__name h3,
-.dish-card__inner__name p {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	word-break: normal;
-	font-size: 16px;
-	width: 262px;
-	transform-origin: left;
-	transition: all 2s;
-}
-.dish-card__inner__price p {
-	text-align: right;
-	padding-bottom: 15px;
-	padding-right: 25px;
+.dish-card:hover .dish-card__inner--check i {
+	transform: translate(-60px) rotate(360deg);
 }
 .dish-card__inner:hover .dish-card__inner__name p {
 	width: 202px;
 }
-
-.dish-card__inner__name p {
-	padding-left: 10px;
-	padding-bottom: 15px;
-	font-size: 13px;
-}
-
-.dish-card__inner__name h3 {
-	padding-left: 10px;
+.dish-card__inner:hover .dish-card__inner__price {
+	transform: translateX(-60px);
 }

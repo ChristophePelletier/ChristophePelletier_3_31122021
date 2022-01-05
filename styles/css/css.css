@@ -402,6 +402,9 @@ footer ul li:nth-child(2) .test {
   height: 70px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px #999999;
+  border-radius: 15px;
 }
 
 .dish-card__inner {
@@ -412,107 +415,92 @@ footer ul li:nth-child(2) .test {
   height: 70px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px #999999;
   transform-origin: top left;
   overflow: hidden;
   background-color: #99e2d0;
-  /*
-  &::after {
-  	content: "";
-  	background-color: #99e2d0;
-  	z-index: 100;
-  	display: block;
-  	position: relative;
-  	top: 0;
-  	right: -150px;
-  	z-index: 10;
-  	width: 250px;
-  	height: 70px;
-  	border-radius: 0 15px 15px 0;
-  	opacity: 50;
-  }*/
 }
 .dish-card__inner__name {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 285px;
   height: 70px;
-  background-color: pink;
+  background-color: white;
 }
 .dish-card__inner__name__title {
-  height: 35px;
-  background-color: maroon;
-}
-.dish-card__inner__name__description {
-  height: 35px;
-  background-color: mediumslateblue;
-}
-.dish-card__inner__price-and-check {
-  display: flex;
-  flex-direction: column;
-  width: 60px;
   height: 70px;
-  transition: all 2s ease-in-out;
-  transform-origin: top left;
-  background-color: red;
-}
-.dish-card__inner__price-and-check--check i {
-  background-color: green;
-  position: relative;
-  left: 70px;
-  top: 25px;
-  transform: rotate(0);
-  z-index: 100;
-  transition: all 2s ease-in-out;
-  transform-origin: 50% 50%;
-  background-color: deepskyblue;
-}
-.dish-card__inner__price-and-check__price {
-  height: 35px;
-  background-color: moccasin;
-}
-.dish-card__inner:hover .dish-card__inner--circle-check {
-  transform: translateX(-60px);
-}
-.dish-card__inner:hover .dish-card__inner__price-and-check {
-  transform: translateX(-60px);
-}
-
-.dish-card__inner:hover .dish-card__inner__price-and-check--check i {
-  transform: rotate(360deg);
-}
-
-.dish-card__inner__name h3,
-.dish-card__inner__name p {
+  padding-top: 12px;
+  padding-left: 10px;
+  font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: normal;
-  font-size: 16px;
   width: 262px;
   transform-origin: left;
   transition: all 2s;
 }
+.dish-card__inner__name__description {
+  height: 70px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: normal;
+  width: 262px;
+  transform-origin: left;
+  transition: all 2s;
+}
+.dish-card__inner__price {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 70px;
+  transition: all 1s ease-in-out;
+  transform-origin: #99e2d0;
+}
+.dish-card__inner__price--empty {
+  height: 35px;
+  background-color: white;
+}
+.dish-card__inner__price__euros {
+  height: 35px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+.dish-card__inner--check {
+  height: 0;
+  width: 0;
+  background-color: red;
+  position: relative;
+}
+.dish-card__inner--check i {
+  position: relative;
+  color: white;
+  left: 18px;
+  top: 26px;
+  transform: translate(0) rotate(0);
+  z-index: 1000;
+  transition: all 1s ease-in-out;
+  transform-origin: 50% 50%;
+}
+.dish-card__inner:hover .dish-card__inner__price {
+  transform: translgateX(-60px);
+}
 
-.dish-card__inner__price p {
-  text-align: right;
-  padding-bottom: 15px;
-  padding-right: 25px;
+.dish-card:hover .dish-card__inner--check i {
+  transform: translate(-60px) rotate(360deg);
 }
 
 .dish-card__inner:hover .dish-card__inner__name p {
   width: 202px;
 }
 
-.dish-card__inner__name p {
-  padding-left: 10px;
-  padding-bottom: 15px;
-  font-size: 13px;
-}
-
-.dish-card__inner__name h3 {
-  padding-left: 10px;
+.dish-card__inner:hover .dish-card__inner__price {
+  transform: translateX(-60px);
 }
 
 /*# sourceMappingURL=css.css.map */
