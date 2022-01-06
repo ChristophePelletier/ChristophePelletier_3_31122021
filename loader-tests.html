@@ -2,6 +2,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>loader</title>
 		<script
 			src="https://kit.fontawesome.com/61717e11f0.js"
@@ -20,12 +21,19 @@
 		<link rel="stylesheet" href="styles/css/css.css" />
 	</head>
 	<body>
-		<div class="loader">
-			<div class="loader__inner"></div>
-			<div class="ohmyfood"><p></p></div>
-			<div class="ohmyfood-2"><p>ohmyfood</p></div>
-			<div class="poursuivant">
-				<i class="fa-solid fa-circle-check fa-lg"></i>
+		<div class="loader__container">
+			<div class="loader">
+				<div class="loader__bck"></div>
+				<div class="loader__ohmyfood-bck"><p></p></div>
+				<div class="loader__ohmyfood-txt"><p>ohmyfood</p></div>
+				<div class="poursuivant-2">
+					<object
+						data="images/check-circle-solid.svg"
+						type="image/svg+xml"
+						width="20"
+						height="20"
+					></object>
+				</div>
 			</div>
 		</div>
 	</body>

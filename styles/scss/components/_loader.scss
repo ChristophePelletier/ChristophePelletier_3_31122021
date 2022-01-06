@@ -1,12 +1,30 @@
+.loader__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
 .loader {
-	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
 	width: 350px;
 	height: 80px;
 	background-color: $secondary-color;
 	overflow: hidden;
 	border-radius: 15px;
 	@include shadow($neutral-dark);
-	.ohmyfood {
+	&__bck {
+		position: relative;
+		background-color: $primary-color;
+		width: 350px;
+		height: 80px;
+		z-index: -5;
+		animation: fill 3s ease-in-out both;
+		transform-origin: left;
+		z-index: 10;
+	}
+	&__ohmyfood-bck {
 		position: relative;
 		top: -40px;
 		left: -80px;
@@ -21,7 +39,7 @@
 		font-size: 13px;
 		text-align: center;
 	}
-	.ohmyfood-2 {
+	&__ohmyfood-txt {
 		position: relative;
 		top: -80px;
 		left: -80px;
@@ -36,19 +54,35 @@
 		font-size: 13px;
 		text-align: center;
 	}
-	&__inner {
-		position: relative;
-		background-color: $primary-color;
-		width: 350px;
-		height: 80px;
-		z-index: -5;
-		animation: fill 3s ease-in-out both;
-		transform-origin: left;
-		z-index: 10;
-	}
 }
 
-.poursuivant {
+.poursuivant-2 {
+	z-index: 20;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	left: -20px;
+	top: -115px;
+	color: $tertiary-color;
+	transform-origin: center center;
+	z-index: 10;
+	animation: deplacement3 3s ease-in-out both;
+}
+/*
+.poursuivant-2::after {
+	content: "";
+	width: 6px;
+	height: 6px;
+	margin: -3px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+	background-color: orange;
+	z-index: 8000;
+}*/
+
+/*.poursuivant {
 	z-index: 20;
 	position: relative;
 	top: -110px;
@@ -57,29 +91,40 @@
 	transform-origin: 50% 50%;
 	text-align: center;
 	animation: deplacement3 3s ease-in-out both;
-}
+}*/
 
 @keyframes fill {
 	0% {
 		transform: scaleX(0);
+		opacity: 0;
 	}
 	10% {
 		transform: scaleX($scale10pct);
+		opacity: 0.05;
 	}
 	20% {
 		transform: scaleX($scale20pct);
+		opacity: 0.01;
 	}
 	50% {
 		transform: scaleX($scale50pct);
+		opacity: 0.2;
 	}
 	80% {
 		transform: scaleX($scale80pct);
+		opacity: 0.6;
 	}
 	90% {
 		transform: scaleX($scale90pct);
+		opacity: 0.8;
+	}
+	90% {
+		transform: scaleX($scale100pct);
+		opacity: 0.9;
 	}
 	100% {
 		transform: scaleX($scale100pct);
+		opacity: 1;
 	}
 }
 
@@ -100,7 +145,7 @@
 		transform: translateX(200px) scaleX(180%);
 	}
 	90% {
-		transform: translateX(300px) scaleX(100%);
+		transform: translateX(350px);
 	}
 	100% {
 		transform: translateX(350px);
@@ -124,7 +169,7 @@
 		transform: translateX(200px);
 	}
 	90% {
-		transform: translateX(300px);
+		transform: translateX(350px);
 	}
 	100% {
 		transform: translateX(350px);
@@ -133,24 +178,24 @@
 
 @keyframes deplacement3 {
 	0% {
-		transform: rotate(0) translateX(-40px) scale(1);
+		transform: translateX(-100px) scaleX(100%) rotate(0);
 	}
 	10% {
-		transform: rotate(0) translateX(-5px);
+		transform: translateX(-80px) rotate(180);
 	}
 	20% {
-		transform: translateX(10px);
+		transform: translateX(-70px) scaleX(100%) rotate(360deg);
 	}
 	50% {
-		transform: translateX(15px);
+		transform: translateX(-45px) scaleX(100%) rotate(720deg);
 	}
 	80% {
-		transform: translateX(170px);
+		transform: translateX(100px) scaleX(250%) rotate(1000deg);
 	}
 	90% {
-		transform: translateX(280px);
+		transform: translateX(160px) rotate(1430deg);
 	}
 	100% {
-		transform: rotate(720deg) translateX(350px) scale(2);
+		transform: translateX(260px) rotate(1430deg);
 	}
 }
