@@ -103,5 +103,15 @@
 
 .dish-card-1-sur-3 {
 	transform-origin: center center;
+	animation: appear1 9s;
+}
+
+.dish-card-2-sur-3 {
+	transform-origin: center center;
+	animation: appear2 9s;
+}
+
+.dish-card-3-sur-3 {
+	transform-origin: center center;
 	animation: appear 9s;
 }
