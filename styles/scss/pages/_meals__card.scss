@@ -1,3 +1,12 @@
+main
+{background-color:$neutral;
+z-index: index 500;
+margin-top:-25px;
+position:relative;
+padding-top:35px;
+border-radius:45px 45px 0 0;
+top:-25px;}
+
 .dish-card {
 	position: relative;
 	overflow: hidden;
@@ -99,19 +108,11 @@
 	}
 }
 
-@include dish-appear ;
+@include dish-appear;
 
-.dish-card-1-sur-3 {
-	transform-origin: center center;
-	animation: appear1 9s;
-}
-
-.dish-card-2-sur-3 {
-	transform-origin: center center;
-	animation: appear2 9s;
-}
-
-.dish-card-3-sur-3 {
-	transform-origin: center center;
-	animation: appear 9s;
+@for $i from 1 through 9 {
+	.dish-card-#{$i}-sur-9 {
+		transform-origin: center center;
+		animation: appear#{$i} 4s ease-in-out;
+	}
 }

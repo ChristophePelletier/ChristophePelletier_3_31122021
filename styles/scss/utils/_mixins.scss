@@ -14,31 +14,31 @@
 	border-radius: 15px;
 }
 
-$delai: 10%;
 @mixin dish-appear($delai: 20%) {
-}
-@for $i from 1 through 9 {
-	@keyframes appear#{$i} {
-		0% {
-			opacity: 0;
-			transform: translateY(20px);
-		}
+	@for $i from 1 through 9 {
+		@keyframes appear#{$i} {
+			0% {
+				opacity: 0;
+				transform: translateY(20px);
+			}
 
-		#{$delai + $i*10} {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		#{$delai + $i*20} {
-			opacity: 1;
-			transform: translateY(0px);
-		}
+			#{$delai + $i*7} {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			#{$delai+($i*7) + 20%} {
+				opacity: 1;
+				transform: translateY(0px);
+			}
 
-		100% {
-			opacity: 1;
-			transform: translateY(0px);
+			100% {
+				opacity: 1;
+				transform: translateY(0px);
+			}
 		}
 	}
 }
+/*
 $delai-1: 15%;
 $delai-2: 22%;
 $delai-3: 29%;
@@ -48,7 +48,6 @@ $delai-6: 50%;
 $delai-7: 57%;
 $delai-8: 67%;
 $delai-9: 74%;
-
 $delais: (
 	entree: (
 		un: $delai-1,
@@ -65,4 +64,4 @@ $delais: (
 		deux: $delai-8,
 		trois: $delai-9,
 	),
-);
+);*/

@@ -9,3 +9,58 @@ header {
 		padding-top: 15px;
 	}
 }
+.interior-page .head {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	height: 320px;
+	z-index:-1;
+	&__info {
+		display: flex;
+		flex-direction: row;
+
+		height: 65px;
+		&__logo {
+			width: 375px;
+			p {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				height: 65px;
+				margin-right: 75px;
+				padding-top: 15px;
+			}
+		}
+		&--return {
+			width: 75px;
+			&__arrow {
+				width: 75px;
+				height: 65px;
+			}
+			& a {
+				display: block;
+				width: 75px;
+				height: 65px;
+			}
+			& i {
+				position: relative;
+				top: 25px;
+				left: 25px;
+			}
+			&__accessibility {
+				display: none;
+			}
+		}
+	}
+	&__deco {
+		height: 255px;
+		width: 375px;
+		background-color: red;
+		img {
+			width:375px;
+			height:255px;
+			object-fit: cover;
+			padding-top:0;
+		}
+	}
+}
