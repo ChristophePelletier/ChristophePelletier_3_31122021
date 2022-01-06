@@ -1,11 +1,14 @@
-main
-{background-color:$neutral;
-z-index: index 500;
-margin-top:-25px;
-position:relative;
-padding-top:35px;
-border-radius:45px 45px 0 0;
-top:-25px;}
+main {
+	background-color: $neutral;
+	z-index: index 500;
+	margin-top: -25px;
+	position: relative;
+	padding-top: 35px;
+	border-radius: 45px 45px 0 0;
+	top: -25px;
+	padding-bottom: 45px;
+	margin-bottom: -25px;
+}
 
 .dish-card {
 	position: relative;
@@ -116,3 +119,55 @@ top:-25px;}
 		animation: appear#{$i} 4s ease-in-out;
 	}
 }
+
+.titraille {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.titraille__like {
+	position: relative;
+	z-index: 1;
+	right: 36px;
+	height: 30px;
+	width: 30px;
+}
+.titraille__like:hover .titraille__like--fill {
+	opacity: 1;
+	cursor: pointer;
+}
+.titraille__like--fill {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	z-index: 10;
+	transition: opacity 2s linear;
+	height: 30px;
+	width: 30px;
+}
+
+.interior-page h1 {
+	padding-left: 15px;
+	font-family: "Shrikhand", cursive;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.interior-page h2 {
+	font-weight: 300;
+	font-size: 18px;
+	margin-top: 40px;
+	margin-left: 15px;
+	margin-bottom: 17px;
+	padding-bottom: 7px;
+	background-image: linear-gradient(to right, $tertiary-color, $tertiary-color);
+	color: black;
+	background-repeat: no-repeat;
+	background-size: 10% 3px;
+	background-position: left bottom;
+}
+
+@include button2;

@@ -59,7 +59,6 @@ a {
 }
 
 h2 {
-  padding-left: 20px;
   font-weight: 700;
 }
 
@@ -393,11 +392,13 @@ footer {
 }
 footer p {
   font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  font-size: 20px;
   padding-bottom: 20px;
 }
 footer ul {
   padding-bottom: 8px;
-  font-size: 14px;
+  font-size: 15px;
 }
 footer ul li {
   padding-bottom: 8px;
@@ -683,6 +684,8 @@ main {
   padding-top: 35px;
   border-radius: 45px 45px 0 0;
   top: -25px;
+  padding-bottom: 45px;
+  margin-bottom: -25px;
 }
 
 .dish-card {
@@ -992,6 +995,99 @@ main {
 .dish-card-9-sur-9 {
   transform-origin: center center;
   animation: appear9 4s ease-in-out;
+}
+
+.titraille {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titraille__like {
+  position: relative;
+  z-index: 1;
+  right: 36px;
+  height: 30px;
+  width: 30px;
+}
+
+.titraille__like:hover .titraille__like--fill {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.titraille__like--fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 2s linear;
+  height: 30px;
+  width: 30px;
+}
+
+.interior-page h1 {
+  padding-left: 15px;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.interior-page h2 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-left: 15px;
+  margin-bottom: 17px;
+  padding-bottom: 7px;
+  background-image: linear-gradient(to right, #99e2d0, #99e2d0);
+  color: black;
+  background-repeat: no-repeat;
+  background-size: 10% 3px;
+  background-position: left bottom;
+}
+
+.btn2 {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 50px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  background: linear-gradient(180deg, #ff79da, #9356dc);
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 6px #909090;
+}
+.btn2 p {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.btn2 p .text {
+  position: absolute;
+  z-index: 100;
+}
+.btn2:hover::after {
+  opacity: 1;
+}
+.btn2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  border-radius: 25px;
+  transition: opacity 2s;
+  background: linear-gradient(180deg, #ff13be, #6023a9);
 }
 
 /*# sourceMappingURL=css.css.map */
