@@ -6,20 +6,18 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 15px;
+	@include radius;
 	@include shadow(white);
-	border-radius: 15px;
 }
 .dish-card__inner {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
 	width: 345px;
 	height: 70px;
 	margin-left: auto;
 	margin-right: auto;
-	transform-origin: top left;
 	overflow: hidden;
-	background-color: #99e2d0;
+	background-color: $tertiary-color;
 	&__name {
 		display: flex;
 		flex-direction: column;
@@ -28,6 +26,7 @@
 		height: 70px;
 		background-color: white;
 		&__title {
+			width: 262px;
 			height: 70px;
 			padding-top: 12px;
 			padding-left: 10px;
@@ -36,22 +35,21 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			word-break: normal;
-			width: 262px;
 			transform-origin: left;
-			transition: all 2s;
+			@include transition-dish-card;
 		}
 		&__description {
+			width: 262px;
 			height: 70px;
 			padding-left: 10px;
-			padding-bottom:5px;
+			padding-bottom: 5px;
 			font-size: 13px;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			word-break: normal;
-			width: 262px;
 			transform-origin: left;
-			transition: all 2s;
+			@include transition-dish-card;
 		}
 	}
 	&__price {
@@ -75,29 +73,35 @@
 	&--check {
 		height: 0;
 		width: 0;
-		background-color: red;
 		position: relative;
 		i {
 			position: relative;
 			color: white;
 			left: 18px;
 			top: 26px;
-			transform: translate(0) rotate(0);
 			z-index: 1000;
 			@include transition-dish-card;
+			transform: translate(0) rotate(0);
 			transform-origin: 50% 50%;
 		}
 	}
 	&:hover .dish-card__inner__price {
 		transform: translgateX(-60px);
 	}
+	&:hover .dish-card__inner--check i {
+		transform: translate(-60px) rotate(360deg);
+	}
+	&:hover .dish-card__inner__name p {
+		width: 202px;
+	}
+	&:hover .dish-card__inner__price {
+		transform: translateX(-60px);
+	}
 }
-.dish-card:hover .dish-card__inner--check i {
-	transform: translate(-60px) rotate(360deg);
-}
-.dish-card__inner:hover .dish-card__inner__name p {
-	width: 202px;
-}
-.dish-card__inner:hover .dish-card__inner__price {
-	transform: translateX(-60px);
+
+@include dish-appear ;
+
+.dish-card-1-sur-3 {
+	transform-origin: center center;
+	animation: appear 9s;
 }
