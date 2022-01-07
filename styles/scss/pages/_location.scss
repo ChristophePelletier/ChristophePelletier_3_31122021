@@ -1,7 +1,4 @@
-.location {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.location-form {
 	height: 50px;
 	background-color: $neutral-intermediary;
 	background-image: linear-gradient(to bottom, #cecece, $neutral-intermediary);
@@ -9,11 +6,83 @@
 	background-repeat: no-repeat;
 	background-size: 100% 5px;
 	background-position: center top;
-	&__icon {
-		padding: 5px;
+	&__container {
+		position: relative;
+		top: 0;
+		left: 0;
 	}
-	&__text {
-		padding: 5px 25px 5px 10px;
-		font-weight: 500;
+}
+form {
+	position: relative;
+	top: 5px;
+	width: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 45px;
+	background-color: $neutral-intermediary;
+	input {
+		display: block;
+		position: absolute;
+		background-color: $neutral-intermediary;
+		top: 0;
+		height: 45px;
+		left: 130px;
+		border: none;
+		font-weight: 700;
+		font-size: 18px;
+		max-width: 240px;
+		z-index: 1;
+		&:focus {
+			border: 3px solid $primary-color;
+			border-radius:5px;
+			outline: 0;
+			background-color: $neutral-intermediary;
+		}
 	}
+	button {
+		position: absolute;
+		top: 0;
+		height: 45px;
+		width: 45px;
+		left: 85px;
+		background-color: $neutral-intermediary;
+		color: black;
+		border: none;
+		&:hover {
+			cursor: pointer;
+		}
+		&:hover {
+			& .under {
+				opacity: 1;
+			}
+		}
+		& .under {
+			color: $primary-color;
+			opacity: 0;
+			position: absolute;
+			top: 15px;
+			left: 0;
+			height: 45px;
+			width: 45px;
+			transition: opacity 2s;
+		}
+	}
+}
+
+.accessibility {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-width: 0;
+}
+::placeholder {
+	color: black;
+}
+
+.hide {
+	display: none;
 }

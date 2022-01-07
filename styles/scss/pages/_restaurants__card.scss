@@ -5,9 +5,10 @@
 	width: 335px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom:18px;
+	margin-bottom: 18px;
 	border-radius: 15px;
 	@include shadow($neutral);
+	z-index: 1;
 	img {
 		width: 335px;
 		height: $card-image-height;
@@ -26,9 +27,9 @@
 			padding-top: 5px;
 			text-align: center;
 			background-color: $tertiary-color;
-			color:darken($tertiary-color, 50%);
-			font-weight:500;
-			font-size:15px;
+			color: darken($tertiary-color, 50%);
+			font-weight: 500;
+			font-size: 15px;
 		}
 	}
 	&__text {
@@ -41,13 +42,13 @@
 			padding-top: 10px;
 			p:first-child {
 				font-weight: bold;
-				font-size:18px;
+				font-size: 18px;
 				padding-bottom: 4px;
 				padding-left: 15px;
 			}
 			p:nth-child(2) {
 				padding-left: 15px;
-				font-size:18px;
+				font-size: 18px;
 			}
 		}
 		&__like {
@@ -74,17 +75,7 @@
 				transition: opacity 2s linear;
 				height: 20px;
 				width: 20px;
-				/*background-image: url("heart-full.png");
-				background-repeat: no-repeat;*/
 			}
 		}
 	}
 }
-.red {
-	stroke: red;
-	fill: currentColor;
-}
-/*
-.bb {
-	background: -webkit-linear-gradient(red, green);
-}*/

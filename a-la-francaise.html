@@ -19,218 +19,288 @@
 		/>
 		<link rel="stylesheet" href="styles/css/css.css" />
 	</head>
-	<body>
-		<header><img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood" /></header>
+	<body class="interior-page">
+		<header class="head">
+			<div class="head__info">
+				<div class="head__info--return">
+					<a href="index.html"
+						><i class="fas fa-arrow-left fa-lg"></i>
+						<p class="head--return__arrow"></p
+					></a>
+					<p class="head__info--return__accessibility">
+						<a href="index.html">Retour</a>
+					</p>
+				</div>
+				<div class="head__info__logo">
+					<p><img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood" /></p>
+				</div>
+			</div>
+			<div class="head__deco">
+				<picture>
+					<source
+						srcset="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+						media="(max-width:768px)"
+					/>
+					<source
+						srcset="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+						media="(max-width:992px)"
+					/>
+					<img
+						class="haute desktop"
+						src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+						alt=""
+					/>
+				</picture>
+			</div>
+		</header>
 
-		<section class="menu">
-			<h1>À la française</h1>
-			<h2>ENTRÉES</h2>
-			<div class="dish-card dish-card__entrees dish-card-1-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">
-								Tartare de poulpe acidulé Tartare de poulpe acidulé
-							</h3>
-							<p class="dish-card__inner__name__description">
-								Aux zests d'orange Aux zests d'orange
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>25€</p>
-							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
+		<main>
+			<section>
+				<div class="titraille">
+					<h1>À la française</h1>
+					<div class="titraille__like">
+						<object
+							data="images/heart-regular.svg"
+							width="30"
+							height="30"
+							type="image/svg+xml"
+						></object>
+						<div class="titraille__like--fill">
+							<object
+								data="images/heart-solid.svg"
+								width="30"
+								height="30"
+								type="image/svg+xml"
+							></object>
 						</div>
 					</div>
-				</a>
-			</div>
+				</div>
+				<div>
+					<h2>ENTRÉES</h2>
+					<div class="dish-card dish-card__entrees dish-card-1-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Tartare de poulpe acidulé Tartare de poulpe acidulé
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Aux zests d'orange Aux zests d'orange
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>25€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
+							</div>
+						</a>
+					</div>
 
-			<div class="dish-card dish-card__entrees dish-card-2-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">
-								Velouté de légumes d'antan
-							</h3>
-							<p class="dish-card__inner__name__description">
-								Carotte, panais, topinambour
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>35€</p>
+					<div class="dish-card dish-card__entrees dish-card-2-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Velouté de légumes d'antan
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Carotte, panais, topinambour
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>35€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="dish-card dish-card__entrees dish-card-3-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">Soupe à l'oignon</h3>
-							<p class="dish-card__inner__name__description">Revisitée</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>20€</p>
+					<div class="dish-card dish-card__entrees dish-card-3-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Soupe à l'oignon
+									</h3>
+									<p class="dish-card__inner__name__description">Revisitée</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>20€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
-			<h2>PLATS</h2>
-			<div class="dish-card dish-card__plats dish-card-1-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">
-								Coquilles Saint-Jacques
-							</h3>
-							<p class="dish-card__inner__name__description">
-								Accompagnées d'une purée de panais
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>40€</p>
+				</div>
+				<div>
+					<h2>PLATS</h2>
+					<div class="dish-card dish-card__plats dish-card-4-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Coquilles Saint-Jacques
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Accompagnées d'une purée de panais
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>40€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="dish-card dish-card__plats dish-card-2-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">Magret de canard</h3>
-							<p class="dish-card__inner__name__description">
-								Et parmentier de pommes de terre
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>35€</p>
+					<div class="dish-card dish-card__plats dish-card-5-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Magret de canard
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Et parmentier de pommes de terre
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>35€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="dish-card dish-card__plats dish-card-3-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">
-								Pigeonneau d’Ille-et-Vilaine
-							</h3>
-							<p class="dish-card__inner__name__description">
-								Sur son lit de gnocchis aux légumes
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>44€</p>
+					<div class="dish-card dish-card__plats dish-card-6-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Pigeonneau d’Ille-et-Vilaine
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Sur son lit de gnocchis aux légumes
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>44€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
-			<h2>DESSERTS</h2>
-			<div class="dish-card dish-card__desserts dish-card-1-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">
-								Pétales de violettes glacés
-							</h3>
-							<p class="dish-card__inner__name__description">
-								Et purée de noisettes
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>18€</p>
+				</div>
+				<div>
+					<h2>DESSERTS</h2>
+					<div class="dish-card dish-card__desserts dish-card-7-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Pétales de violettes glacés
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Et purée de noisettes
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>18€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="dish-card dish-card__desserts dish-card-2-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">Fondant au chocolat</h3>
-							<p class="dish-card__inner__name__description">Revisité</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>22€</p>
+					<div class="dish-card dish-card__desserts dish-card-8-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Fondant au chocolat
+									</h3>
+									<p class="dish-card__inner__name__description">Revisité</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>22€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="dish-card dish-card__desserts dish-card-3-sur-3">
-				<a href="#">
-					<div class="dish-card__inner">
-						<div class="dish-card__inner__name">
-							<h3 class="dish-card__inner__name__title">
-								Millefeuille croustillant
-							</h3>
-							<p class="dish-card__inner__name__description">
-								Myrtilles et pâte d’amande
-							</p>
-						</div>
-						<div class="dish-card__inner__price">
-							<div class="dish-card__inner__price--empty"></div>
-							<div class="dish-card__inner__price__euros">
-								<p>23€</p>
+					<div class="dish-card dish-card__desserts dish-card-9-sur-9">
+						<a href="#">
+							<div class="dish-card__inner">
+								<div class="dish-card__inner__name">
+									<h3 class="dish-card__inner__name__title">
+										Millefeuille croustillant
+									</h3>
+									<p class="dish-card__inner__name__description">
+										Myrtilles et pâte d’amande
+									</p>
+								</div>
+								<div class="dish-card__inner__price">
+									<div class="dish-card__inner__price--empty"></div>
+									<div class="dish-card__inner__price__euros">
+										<p>23€</p>
+									</div>
+								</div>
+								<div class="dish-card__inner--check">
+									<i class="fa-solid fa-circle-check fa-lg"></i>
+								</div>
 							</div>
-						</div>
-						<div class="dish-card__inner--check">
-							<i class="fa-solid fa-circle-check fa-lg"></i>
-						</div>
+						</a>
 					</div>
+				</div>
+			</section>
+			<section>
+				<a class="btn2" href="#">
+					<p><span class="text">Commander</span></p>
 				</a>
-			</div>
-		</section>
+			</section>
+		</main>
+
 		<footer>
 			<p>ohmyfood</p>
 			<ul>

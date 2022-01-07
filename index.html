@@ -22,17 +22,30 @@
 	<body>
 		<header><img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood" /></header>
 
-		<section class="location">
-			<div class="location__icon">
-				<p>
-					<span class="material-icons">
-						<i class="fa-solid fa-location-dot"></i>
-					</span>
+		<section class="location-form">
+			<form method="post" action="#">
+				<p class="location-form__container">
+					<label for="place">
+						<span class="hide">
+							Trouver un restaurant proche de chez vous
+						</span>
+					</label>
+					<input
+						type="search"
+						id="place"
+						name="place"
+						size="30"
+						placeholder="Paris, Belleville"
+					/>
+					<button type="submit">
+						<i class="fa-solid fa-location-dot fa-lg"></i>
+						<span class="accessibility"> Rechercher </span>
+						<span class="under"
+							><i class="fa-solid fa-location-dot fa-lg"></i
+						></span>
+					</button>
 				</p>
-			</div>
-			<div class="location__text">
-				<p>Paris, Belleville</p>
-			</div>
+			</form>
 		</section>
 		<section class="presentation">
 			<h1>Réservez le menu qui vous convient</h1>
@@ -56,7 +69,6 @@
 						data="styles/css/mobile-screen-button-solid-1.svg"
 						type="image/svg+xml"
 					></object>
-					<!--<i class="fas fa-mobile-alt fa-lg"></i>-->
 				</p>
 
 				<p class="step__text">Choisissez un restaurant</p>
@@ -70,7 +82,6 @@
 						data="styles/css/list-solid-1.svg"
 						type="image/svg+xml"
 					></object>
-					<!--<i class="fas fa-list-ul fa-lg"></i>-->
 				</p>
 				<p class="step__text">Composez votre menu</p>
 			</div>
@@ -83,7 +94,6 @@
 						data="styles/css/store-solid-1.svg"
 						type="image/svg+xml"
 					></object>
-					<!--<i class="fas fa-store fa-lg"></i>-->
 				</p>
 				<p class="step__text">Dégustez au restaurant</p>
 			</div>
@@ -93,45 +103,45 @@
 			<div>
 				<h2>Restaurants</h2>
 			</div>
-			<div class="card">
-				<div class="card__image">
-					<a href="#">
-						<img
-							src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-							alt="La palette du goût"
-						/>
-						<p>Nouveau</p>
-					</a>
-				</div>
-				<div class="card__text">
-					<a href="#">
-						<div>
-							<p>La palette du goût</p>
-							<p>Ménilmontant</p>
-						</div>
-					</a>
 
-					<div class="card__text__like">
-						<p>
-							<object
-								data="images/heart-regular.svg"
-								width="20"
-								height="20"
-								type="image/svg+xml"
-							></object>
-							<!--<i class="far fa-heart fa-lg"></i>-->
-						</p>
-						<div class="card__text__like--fill">
+			<div>
+				<div class="card">
+					<div class="card__image">
+						<a href="#">
+							<img
+								src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+								alt="La palette du goût"
+							/>
+							<p>Nouveau</p>
+						</a>
+					</div>
+					<div class="card__text">
+						<a href="#">
+							<div>
+								<p>La palette du goût</p>
+								<p>Ménilmontant</p>
+							</div>
+						</a>
+
+						<div class="card__text__like">
 							<p>
 								<object
-									data="images/heart-solid.svg"
+									data="images/heart-regular.svg"
 									width="20"
 									height="20"
 									type="image/svg+xml"
 								></object>
-								<!--<img src="images/heart-regular.svg" />
-								<i class="fas fa-heart fa-lg bb"></i>-->
 							</p>
+							<div class="card__text__like--fill">
+								<p>
+									<object
+										data="images/heart-solid.svg"
+										width="20"
+										height="20"
+										type="image/svg+xml"
+									></object>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -163,7 +173,6 @@
 								height="20"
 								type="image/svg+xml"
 							></object>
-							<!--<i class="far fa-heart fa-lg"></i>-->
 						</p>
 						<div class="card__text__like--fill">
 							<p>
@@ -173,102 +182,95 @@
 									height="20"
 									type="image/svg+xml"
 								></object>
-								<!--<img src="images/heart-regular.svg" />
-								<i class="fas fa-heart fa-lg bb"></i>-->
 							</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="card">
-				<div class="card__image">
-					<a href="#">
-						<img
-							src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-							alt="À la française"
-						/>
-						<p>Nouveau</p>
-					</a>
-				</div>
-				<div class="card__text">
-					<a href="#">
-						<div>
-							<p>À la française</p>
-							<p>Cité Rouge</p>
-						</div>
-					</a>
+				<div class="card">
+					<div class="card__image">
+						<a href="#">
+							<img
+								src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+								alt="À la française"
+							/>
+							<p>Nouveau</p>
+						</a>
+					</div>
+					<div class="card__text">
+						<a href="#">
+							<div>
+								<p>À la française</p>
+								<p>Cité Rouge</p>
+							</div>
+						</a>
 
-					<div class="card__text__like">
-						<p>
-							<object
-								data="images/heart-regular.svg"
-								width="20"
-								height="20"
-								type="image/svg+xml"
-							></object>
-							<!--<i class="far fa-heart fa-lg"></i>-->
-						</p>
-						<div class="card__text__like--fill">
+						<div class="card__text__like">
 							<p>
 								<object
-									data="images/heart-solid.svg"
+									data="images/heart-regular.svg"
 									width="20"
 									height="20"
 									type="image/svg+xml"
 								></object>
-								<!--<img src="images/heart-regular.svg" />
-								<i class="fas fa-heart fa-lg bb"></i>-->
 							</p>
+							<div class="card__text__like--fill">
+								<p>
+									<object
+										data="images/heart-solid.svg"
+										width="20"
+										height="20"
+										type="image/svg+xml"
+									></object>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="card">
-				<div class="card__image">
-					<a href="#">
-						<img
-							src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-							alt="Le délice des sens"
-						/>
-						<p>Nouveau</p>
-					</a>
-				</div>
-				<div class="card__text">
-					<a href="#">
-						<div>
-							<p>Le délice des sens</p>
-							<p>Folie-Méricourt</p>
-						</div>
-					</a>
+				<div class="card">
+					<div class="card__image">
+						<a href="#">
+							<img
+								src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+								alt="Le délice des sens"
+							/>
+							<p>Nouveau</p>
+						</a>
+					</div>
+					<div class="card__text">
+						<a href="#">
+							<div>
+								<p>Le délice des sens</p>
+								<p>Folie-Méricourt</p>
+							</div>
+						</a>
 
-					<div class="card__text__like">
-						<p>
-							<object
-								data="images/heart-regular.svg"
-								width="20"
-								height="20"
-								type="image/svg+xml"
-							></object>
-							<!--<i class="far fa-heart fa-lg"></i>-->
-						</p>
-						<div class="card__text__like--fill">
+						<div class="card__text__like">
 							<p>
 								<object
-									data="images/heart-solid.svg"
+									data="images/heart-regular.svg"
 									width="20"
 									height="20"
 									type="image/svg+xml"
 								></object>
-								<!--<img src="images/heart-regular.svg" />
-								<i class="fas fa-heart fa-lg bb"></i>-->
 							</p>
+							<div class="card__text__like--fill">
+								<p>
+									<object
+										data="images/heart-solid.svg"
+										width="20"
+										height="20"
+										type="image/svg+xml"
+									></object>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
 		<footer>
 			<p>ohmyfood</p>
 			<ul>
@@ -284,5 +286,6 @@
 				<li>Contact</li>
 			</ul>
 		</footer>
+		
 	</body>
 </html>

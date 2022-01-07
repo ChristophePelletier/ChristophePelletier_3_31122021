@@ -92,7 +92,6 @@
 		}
 	}
 	&__pic::after {
-		/*content: url(mobile-screen-button-solid-2.svg);*/
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -113,16 +112,3 @@
 		content: url(store-solid-2.svg);
 	}
 }
-
-/*
-.step__pic__un::after {
-	content: url(mobile-screen-button-solid-2.svg);
-}
-.step__pic__deux::after {
-	content: url(list-solid-2.svg);
-}
-.step__pic__trois::after {
-	content: url(store-solid-2.svg);
-	z-index: 20;
-}
-*/
