@@ -5,6 +5,7 @@
 	h2 {
 		padding-bottom: 30px;
 	}
+	/*
 	@media all and (min-width: 768px) {
 		display: flex;
 		flex-direction: row;
@@ -12,7 +13,7 @@
 		align-items:center;
 		height:150px;
 		background-color:$tertiary-color;
-	}
+	}*/
 }
 
 .step {
@@ -25,9 +26,10 @@
 	@include shadow(white);
 	margin-left: 30px;
 	margin-bottom: 20px;
+	/*
 	@media all and (min-width: 768px) {
 		width: 225px;
-	}
+	}*/
 	&__number {
 		position: absolute;
 		width: $step__number-width;
@@ -61,13 +63,14 @@
 		margin: 0;
 		padding: 0;
 		line-height: $step-height;
+		/*
 		@media all and (min-width: 768px) {
 			left:25px;
 		}
 		i {
 			color: $neutral-dark;
 			margin-top: 15px;
-		}
+		}*/
 	}
 	&__text {
 		position: absolute;
@@ -80,13 +83,14 @@
 		line-height: $step-height;
 		font-weight: 700;
 		font-size: 17px;
+		/*
 		@media all and (min-width: 768px) {
 			padding-top: 18px;
 			max-width:120px;
 			height:75px;
 			line-height: 20px;
 			left:55px;
-		}
+		}*/
 	}
 	&:hover {
 		&::after {
