@@ -9,12 +9,13 @@ header {
 		padding-top: 15px;
 	}
 }
+
 .interior-page .head {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: stretch;
 	height: 320px;
-	z-index:-1;
+	z-index: -1;
 	&__info {
 		display: flex;
 		flex-direction: row;
@@ -57,10 +58,10 @@ header {
 		width: 375px;
 		background-color: red;
 		img {
-			width:375px;
-			height:255px;
+			width: 375px;
+			height: 255px;
 			object-fit: cover;
-			padding-top:0;
+			padding-top: 0;
 		}
 	}
 }

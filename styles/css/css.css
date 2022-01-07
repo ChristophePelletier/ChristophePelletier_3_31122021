@@ -47,6 +47,17 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   color: black;
+  background-color: cadetblue;
+}
+@media all and (min-width: 768px) {
+  body {
+    max-width: 992px;
+  }
+}
+@media all and (min-width: 993px) {
+  body {
+    max-width: 1280px;
+  }
 }
 
 a:hover {
@@ -83,6 +94,12 @@ ul {
   background-color: #f6f6f6;
 }
 
+@media all and (max-width: 992px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
 .loader__container {
   display: flex;
   justify-content: center;
@@ -432,6 +449,16 @@ footer ul li:nth-child(2) .test {
 .fonctionnement h2 {
   padding-bottom: 30px;
 }
+@media all and (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    background-color: #99e2d0;
+  }
+}
 
 .step {
   width: 330px;
@@ -443,6 +470,11 @@ footer ul li:nth-child(2) .test {
   box-shadow: 0 3px 6px #999999;
   margin-left: 30px;
   margin-bottom: 20px;
+}
+@media all and (min-width: 768px) {
+  .step {
+    width: 225px;
+  }
 }
 .step__number {
   position: absolute;
@@ -478,6 +510,11 @@ footer ul li:nth-child(2) .test {
   padding: 0;
   line-height: 75px;
 }
+@media all and (min-width: 768px) {
+  .step__pic {
+    left: 25px;
+  }
+}
 .step__pic i {
   color: #7e7e7e;
   margin-top: 15px;
@@ -493,6 +530,15 @@ footer ul li:nth-child(2) .test {
   line-height: 75px;
   font-weight: 700;
   font-size: 17px;
+}
+@media all and (min-width: 768px) {
+  .step__text {
+    padding-top: 18px;
+    max-width: 120px;
+    height: 75px;
+    line-height: 20px;
+    left: 55px;
+  }
 }
 .step:hover::after {
   opacity: 1;
@@ -656,13 +702,30 @@ form button .under {
   margin-bottom: 18px;
   border-radius: 15px;
   box-shadow: 0 3px 6px #909090;
+  z-index: 2;
+}
+.card:hover::after {
+  opacity: 1;
+}
+.card::after {
+  content: "";
+  background-color: #99e2d0;
+  border-radius: 15px;
+  height: 255px;
+  width: 335px;
+  opacity: 0;
   z-index: 1;
+  position: absolute;
+  box-shadow: 0 3px 6px #278870;
+  transition: opacity 200ms ease-in-out;
 }
 .card img {
+  position: relative;
   width: 335px;
   height: 175px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+  z-index: 2000;
 }
 .card__image {
   position: relative;
@@ -685,6 +748,7 @@ form button .under {
   display: flex;
   align-items: flex-start;
   height: 80px;
+  z-index: 2;
 }
 .card__text a:first-child > div {
   width: 335px;
