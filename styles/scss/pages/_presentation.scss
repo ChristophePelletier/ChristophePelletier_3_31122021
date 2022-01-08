@@ -2,6 +2,9 @@
 	height: 290px;
 	padding-top: 40px;
 	background-color: $neutral;
+	@media all and (min-width: 768px) {
+		height: 220px;
+	}
 }
 .presentation h1 {
 	font-family: Roboto, sans-serif;

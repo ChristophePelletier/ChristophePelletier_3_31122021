@@ -2,18 +2,13 @@
 	height: 440px;
 	padding-top: 50px;
 	background-color: white;
+	@media all and (min-width: 768px) {
+		height: 250px;
+	}
 	h2 {
 		padding-bottom: 30px;
+		padding-left: 15px;
 	}
-	/*
-	@media all and (min-width: 768px) {
-		display: flex;
-		flex-direction: row;
-		justify-content:space-around;
-		align-items:center;
-		height:150px;
-		background-color:$tertiary-color;
-	}*/
 }
 
 .step {
@@ -26,10 +21,18 @@
 	@include shadow(white);
 	margin-left: 30px;
 	margin-bottom: 20px;
-	/*
+	word-wrap: break-word;
+			overflow-wrap: break-word;
 	@media all and (min-width: 768px) {
-		width: 225px;
-	}*/
+		width: $step-width-tablette;
+		height: $step-height-tablette;
+		margin-bottom: 0;
+		margin-right:10px;
+	}
+	i {
+		color: $neutral-dark;
+		margin-top: 15px;
+	}
 	&__number {
 		position: absolute;
 		width: $step__number-width;
@@ -40,6 +43,10 @@
 		padding: 0;
 		font-weight: 300;
 		font-size: 15px;
+		@media all and (min-width: 768px) {
+			width: $step__number-width-tablette;
+			height: $step-height-tablette;
+		}
 		.centrage {
 			color: white;
 			background-color: $primary-color;
@@ -63,14 +70,11 @@
 		margin: 0;
 		padding: 0;
 		line-height: $step-height;
-		/*
 		@media all and (min-width: 768px) {
-			left:25px;
+			width: $step__pic-width-tablette;
+			height: $step-height-tablette;
+			left: $step__number-width-tablette;
 		}
-		i {
-			color: $neutral-dark;
-			margin-top: 15px;
-		}*/
 	}
 	&__text {
 		position: absolute;
@@ -83,14 +87,17 @@
 		line-height: $step-height;
 		font-weight: 700;
 		font-size: 17px;
-		/*
 		@media all and (min-width: 768px) {
-			padding-top: 18px;
-			max-width:120px;
-			height:75px;
-			line-height: 20px;
-			left:55px;
-		}*/
+			max-width: 140px;
+			padding-top:15px;
+			line-height:22px;
+			height: $step-height-tablette;
+			left: $step__number-width-tablette + $step__pic-width-tablette;
+			padding-left: 5px;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			font-size:18px;
+		}
 	}
 	&:hover {
 		&::after {
@@ -136,4 +143,17 @@
 	&__pic__trois::after {
 		content: url(store-solid-2.svg);
 	}
+}
+
+@media all and (min-width: 768px) {
+	.step-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.fonctionnement h2 
+	{text-align: center;}
 }

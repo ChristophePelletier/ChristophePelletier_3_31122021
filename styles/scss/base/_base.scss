@@ -11,34 +11,30 @@ body {
 	max-width: $max-width-mobile;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0;
 	font-family: "Roboto", sans-serif;
 	color: black;
 	@media all and (min-width: 768px) {
 		max-width: $max-width-tablette;
+		background-color: $neutral-dark;
 	}
 	@media all and (min-width: 993px) {
 		max-width: $max-width-desktop;
+		background-color: $tertiary-color;
 	}
 }
-
-a:hover {
-	cursor: pointer;
-}
-
 a {
 	text-decoration: none;
 	color: black;
 }
-
 a:hover {
 	cursor: pointer;
 }
-
 h2 {
 	font-weight: 700;
 }
-
+ul {
+	list-style-type: none;
+}
 .restaurants {
 	background-color: $neutral;
 	padding-top: 60px;
@@ -47,11 +43,6 @@ h2 {
 		padding-bottom: 30px;
 	}
 }
-
-ul {
-	list-style-type: none;
-}
-
 .menu {
 	background-color: $neutral;
 }

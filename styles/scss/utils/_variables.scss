@@ -6,7 +6,6 @@ $neutral-intermediary: #eaeaea;
 $neutral-dark: #7e7e7e;
 $neutral-deep-dark: #353535;
 
-/*mobile*/
 $max-width-mobile: 375px;
 $max-width-tablette: 750px;
 $max-width-desktop: 1280px;
@@ -16,6 +15,17 @@ $step__number-width: 35px;
 $step__pic-width: 40px;
 $step__text-width: 330- ($step__number-width + $step__pic-width);
 $step-width: ($step__number-width + $step__pic-width + $step__text-width);
+
+/*fonctionnement tab et mobile*/
+$step-height-tablette: 75px;
+$step__number-width-tablette: 30px;
+$step__pic-width-tablette: 30px;
+$step__text-width-tablette: 255- ($step__number-width-tablette +
+			$step__pic-width-tablette);
+$step-width-tablette: (
+	$step__number-width-tablette + $step__pic-width-tablette +
+		$step__text-width-tablette
+);
 
 /*cards*/
 $card-image-height: 175px;
