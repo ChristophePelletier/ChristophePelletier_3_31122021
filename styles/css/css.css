@@ -112,6 +112,7 @@ ul {
   width: 100%;
   height: 100%;
   animation: loader_after 3s ease-in-out both;
+  transform-origin: left;
 }
 
 .loader__container {
@@ -128,7 +129,7 @@ ul {
     opacity: 1;
     z-index: 5000;
   }
-  90% {
+  97% {
     opacity: 1;
     z-index: 5000;
     animation-timing-function: ease-in-out;
@@ -142,7 +143,7 @@ ul {
   0% {
     visibility: hidden;
   }
-  90% {
+  97% {
     visibility: hidden;
     opacity: 0;
     animation-timing-function: ease-in-out;
@@ -152,12 +153,12 @@ ul {
     opacity: 1;
   }
 }
-header,
+.index header,
 .location-form,
 .presentation,
 .fonctionnement,
 .restaurants,
-footer {
+.index footer {
   animation: appear 3s ease-in-out;
 }
 
@@ -282,7 +283,7 @@ footer {
     80% {
       transform: translateX(200px) scale(200%, 200%) rotate(1000deg);
     }
-    90% {
+    85% {
       transform: translateX(320px) scale(300%, 200%) rotate(1430deg);
     }
     100% {
@@ -316,7 +317,7 @@ footer {
     transform: scaleX(87%);
     opacity: 0.8;
   }
-  90% {
+  95% {
     transform: scaleX(100%);
     opacity: 0.9;
   }
@@ -341,7 +342,7 @@ footer {
   80% {
     transform: translateX(200px) scaleX(180%);
   }
-  90% {
+  85% {
     transform: translateX(350px);
   }
   100% {
@@ -364,7 +365,7 @@ footer {
   80% {
     transform: translateX(200px);
   }
-  90% {
+  85% {
     transform: translateX(350px);
   }
   100% {
@@ -410,7 +411,7 @@ footer {
   80% {
     transform: translateX(400px) scaleX(180%);
   }
-  90% {
+  85% {
     transform: translateX(700px);
   }
   100% {
@@ -433,7 +434,7 @@ footer {
   80% {
     transform: translateX(400px);
   }
-  90% {
+  85% {
     transform: translateX(700px);
   }
   100% {
@@ -461,7 +462,7 @@ footer {
     transform: scaleX(70%);
     opacity: 0.6;
   }
-  90% {
+  85% {
     transform: scaleX(87%);
     opacity: 0.8;
   }
@@ -568,8 +569,8 @@ header img {
 }
 .interior-page .head__info--return i {
   position: relative;
-  top: 25px;
-  left: 25px;
+  top: 35px;
+  left: 15px;
   opacity: 70%;
   transition: 1s ease-in-out;
 }
@@ -1101,6 +1102,11 @@ form button .under {
     height: 120px;
   }
 }
+@media all and (max-width: 992px) {
+  .dish-card--big-height {
+    height: 100px;
+  }
+}
 
 .dish-card__inner {
   display: flex;
@@ -1123,6 +1129,11 @@ form button .under {
     height: 120px;
   }
 }
+@media all and (max-width: 992px) {
+  .dish-card__inner--big-height {
+    height: 100px;
+  }
+}
 .dish-card__inner__name {
   display: flex;
   flex-direction: column;
@@ -1131,6 +1142,12 @@ form button .under {
   height: 70px;
   background-color: white;
 }
+@media all and (max-width: 992px) {
+  .dish-card__inner__name--big-height {
+    height: 100px;
+    background-color: blueviolet;
+  }
+}
 @media all and (min-width: 992px) {
   .dish-card__inner__name {
     width: 255px;
@@ -1138,16 +1155,16 @@ form button .under {
   }
 }
 .dish-card__inner__name__title {
-  width: 262px;
-  height: 35px;
-  padding-top: 12px;
+  width: 260px;
+  height: 40px;
+  padding-top: 17px;
   padding-left: 10px;
-  font-size: 16px;
+  font-size: 17px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: normal;
   transform-origin: left;
+  z-index: 50;
   transition: all 620ms ease-in-out;
 }
 @media all and (min-width: 992px) {
@@ -1158,12 +1175,19 @@ form button .under {
     z-index: 100;
   }
 }
+@media all and (max-width: 992px) {
+  .dish-card__inner__name__title--big-height {
+    height: 60px;
+    background-color: green;
+    z-index: 500;
+  }
+}
 .dish-card__inner__name__description {
   width: 262px;
-  height: 35px;
+  height: 40px;
   padding-left: 10px;
   padding-bottom: 5px;
-  padding-top: 10px;
+  padding-top: 8px;
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
@@ -1193,6 +1217,12 @@ form button .under {
     height: 120px;
   }
 }
+@media all and (max-width: 992px) {
+  .dish-card__inner__price--big-height {
+    height: 100px;
+    background-color: red;
+  }
+}
 .dish-card__inner__price--empty {
   height: 35px;
   background-color: white;
@@ -1204,7 +1234,7 @@ form button .under {
 }
 .dish-card__inner__price__euros {
   height: 35px;
-  padding-top: 8px;
+  padding-top: 7px;
   background-color: white;
   font-size: 16px;
   font-weight: 700;
@@ -1251,6 +1281,14 @@ form button .under {
 }
 @media all and (min-width: 992px) {
   .dish-card__inner:hover .dish-card__inner__name p {
+    width: 160px;
+  }
+}
+.dish-card__inner:hover .dish-card__inner__name__title {
+  width: 202px;
+}
+@media all and (min-width: 992px) {
+  .dish-card__inner:hover .dish-card__inner__name__title {
     width: 160px;
   }
 }
@@ -1420,6 +1458,24 @@ form button .under {
     transform: translateY(0px);
   }
 }
+@keyframes appear10 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  110% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .dish-card-1-sur-9 {
   transform-origin: center center;
   animation: appear1 4s ease-in-out;
@@ -1463,6 +1519,56 @@ form button .under {
 .dish-card-9-sur-9 {
   transform-origin: center center;
   animation: appear9 4s ease-in-out;
+}
+
+.dish-card-1-sur-10 {
+  transform-origin: center center;
+  animation: appear1 4s ease-in-out;
+}
+
+.dish-card-2-sur-10 {
+  transform-origin: center center;
+  animation: appear2 4s ease-in-out;
+}
+
+.dish-card-3-sur-10 {
+  transform-origin: center center;
+  animation: appear3 4s ease-in-out;
+}
+
+.dish-card-4-sur-10 {
+  transform-origin: center center;
+  animation: appear4 4s ease-in-out;
+}
+
+.dish-card-5-sur-10 {
+  transform-origin: center center;
+  animation: appear5 4s ease-in-out;
+}
+
+.dish-card-6-sur-10 {
+  transform-origin: center center;
+  animation: appear6 4s ease-in-out;
+}
+
+.dish-card-7-sur-10 {
+  transform-origin: center center;
+  animation: appear7 4s ease-in-out;
+}
+
+.dish-card-8-sur-10 {
+  transform-origin: center center;
+  animation: appear8 4s ease-in-out;
+}
+
+.dish-card-9-sur-10 {
+  transform-origin: center center;
+  animation: appear9 4s ease-in-out;
+}
+
+.dish-card-10-sur-10 {
+  transform-origin: center center;
+  animation: appear10 4s ease-in-out;
 }
 
 .titraille {
@@ -1511,14 +1617,14 @@ form button .under {
 .interior-page h2 {
   font-weight: 300;
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 33px;
   margin-left: 15px;
   margin-bottom: 17px;
   padding-bottom: 7px;
   background-image: linear-gradient(to right, #99e2d0, #99e2d0);
   color: black;
   background-repeat: no-repeat;
-  background-size: 10% 3px;
+  background-size: 14% 3px;
   background-position: left bottom;
 }
 
@@ -1557,10 +1663,11 @@ form button .under {
   bottom: 0;
   left: 0;
   z-index: 10;
+  box-shadow: 0 3px 6px black;
   opacity: 0;
   border-radius: 25px;
-  transition: opacity 2s;
-  background: linear-gradient(180deg, #ff13be, #6023a9);
+  transition: opacity 1s;
+  background: linear-gradient(180deg, #ff93e1, #a16be0);
 }
 
 @media all and (min-width: 992px) {
@@ -1591,6 +1698,12 @@ form button .under {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media all and (max-width: 992px) {
+  .dish-card__inner__name__description--big-height {
+    background-color: coral;
+    height: 40px;
   }
 }
 

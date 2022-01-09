@@ -38,6 +38,7 @@ header {
 		&--return {
 			width: 75px;
 			&__arrow {
+				
 				width: 75px;
 				height: 65px;
 			}
@@ -48,8 +49,8 @@ header {
 			}
 			& i {
 				position: relative;
-				top: 25px;
-				left: 25px;
+				top: 35px;
+				left: 15px;
 				opacity: 70%;
 				transition: 1s ease-in-out;
 				&:hover {

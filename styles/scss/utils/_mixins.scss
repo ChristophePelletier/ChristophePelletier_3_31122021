@@ -15,7 +15,7 @@
 }
 
 @mixin dish-appear($delai: 20%) {
-	@for $i from 1 through 9 {
+	@for $i from 1 through 10 {
 		@keyframes appear#{$i} {
 			0% {
 				opacity: 0;
@@ -103,13 +103,14 @@ $delais: (
 			bottom: 0;
 			left: 0;
 			z-index: 10;
+			@include shadow($neutral-deep-dark);
 			opacity: 0;
 			border-radius: 25px;
-			transition: opacity 2s;
+			transition: opacity 1s;
 			background: linear-gradient(
 				180deg,
-				darken($secondary-color, 20%),
-				darken($primary-color, 20%)
+				lighten($secondary-color, 5%),
+				lighten($primary-color, 5%)
 			);
 		}
 	}

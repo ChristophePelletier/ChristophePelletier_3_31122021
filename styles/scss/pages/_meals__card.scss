@@ -24,6 +24,10 @@
 		width: 300px;
 		height: 120px;
 	}
+	@media all and (max-width: 992px) {
+	&--big-height {
+		height: 100px;
+	}}
 }
 .dish-card__inner {
 	display: flex;
@@ -38,6 +42,11 @@
 		width: 300px;
 		height: 120px;
 	}
+	@media all and (max-width: 992px) {
+		&--big-height {
+			height: 100px;
+		}
+	}
 	&__name {
 		display: flex;
 		flex-direction: column;
@@ -45,35 +54,46 @@
 		width: 285px;
 		height: 70px;
 		background-color: white;
+		@media all and (max-width: 992px) {
+		&--big-height {
+			height: 100px;
+			background-color: blueviolet;
+		}}
 		@media all and (min-width: 992px) {
 			width: 255px;
 			height: 120px;
 		}
 		&__title {
-			width: 262px;
-			height: 35px;
-			padding-top: 12px;
+			width: 260px;
+			height: 40px;
+			padding-top: 17px;
 			padding-left: 10px;
-			font-size: 16px;
+			font-size: 17px;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			word-break: normal;
 			transform-origin: left;
+			z-index: 50;
 			@include transition-dish-card;
 			@media all and (min-width: 992px) {
 				padding-top: 40px;
 				width: 250px;
 				height: 80px;
-				z-index:100;
+				z-index: 100;
 			}
+			@media all and (max-width: 992px) {
+			&--big-height {
+				height: 60px;
+				background-color: green;
+				z-index: 500;
+			}}
 		}
 		&__description {
 			width: 262px;
-			height: 35px;
+			height: 40px;
 			padding-left: 10px;
 			padding-bottom: 5px;
-			padding-top: 10px;
+			padding-top: 8px;
 			font-size: 13px;
 			white-space: nowrap;
 			overflow: hidden;
@@ -99,6 +119,11 @@
 		@media all and (min-width: 992px) {
 			height: 120px;
 		}
+		@media all and (max-width: 992px) {
+		&--big-height {
+			height: 100px;
+			background-color: red;
+		}}
 		&--empty {
 			height: 35px;
 			background-color: white;
@@ -108,7 +133,7 @@
 		}
 		&__euros {
 			height: 35px;
-			padding-top: 8px;
+			padding-top: 7px;
 			background-color: white;
 			font-size: 16px;
 			font-weight: 700;
@@ -143,8 +168,15 @@
 		transform: translate(-60px) rotate(360deg);
 		@media all and (min-width: 992px) {
 			transform: translate(-50px) rotate(360deg);
-	}}
+		}
+	}
 	&:hover .dish-card__inner__name p {
+		width: 202px;
+		@media all and (min-width: 992px) {
+			width: 160px;
+		}
+	}
+	&:hover .dish-card__inner__name__title {
 		width: 202px;
 		@media all and (min-width: 992px) {
 			width: 160px;
@@ -164,6 +196,13 @@
 
 @for $i from 1 through 9 {
 	.dish-card-#{$i}-sur-9 {
+		transform-origin: center center;
+		animation: appear#{$i} 4s ease-in-out;
+	}
+}
+
+@for $i from 1 through 10 {
+	.dish-card-#{$i}-sur-10 {
 		transform-origin: center center;
 		animation: appear#{$i} 4s ease-in-out;
 	}
@@ -211,38 +250,44 @@
 .interior-page h2 {
 	font-weight: 300;
 	font-size: 18px;
-	margin-top: 40px;
+	margin-top: 33px;
 	margin-left: 15px;
 	margin-bottom: 17px;
 	padding-bottom: 7px;
 	background-image: linear-gradient(to right, $tertiary-color, $tertiary-color);
 	color: black;
 	background-repeat: no-repeat;
-	background-size: 10% 3px;
+	background-size: 14% 3px;
 	background-position: left bottom;
 }
 
 @include button2;
 
 @media all and (min-width: 992px) {
-	.titraille h1
-	{padding-right:75px;}
+	.titraille h1 {
+		padding-right: 75px;
+	}
 	.step-meal {
 		display: flex;
 		flex-direction: column;
-		h2 
-		{text-align:center;
+		h2 {
+			text-align: center;
 			font-weight: 500;
 			font-size: 22px;
 			margin-top: 40px;
 			margin-left: 15px;
 			margin-bottom: 17px;
 			padding-bottom: 7px;
-			background-image: linear-gradient(to right, $tertiary-color, $tertiary-color);
+			background-image: linear-gradient(
+				to right,
+				$tertiary-color,
+				$tertiary-color
+			);
 			color: black;
 			background-repeat: no-repeat;
 			background-size: 10% 5px;
-			background-position: center bottom;}
+			background-position: center bottom;
+		}
 	}
 	.step-meal-2 {
 		display: flex;
@@ -250,3 +295,7 @@
 		justify-content: space-between;
 	}
 }
+@media all and (max-width: 992px) {
+.dish-card__inner__name__description--big-height
+{background-color:coral;
+height:40px;}}
