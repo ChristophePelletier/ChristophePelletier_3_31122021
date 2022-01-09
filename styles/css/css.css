@@ -1099,7 +1099,6 @@ form button .under {
   .dish-card {
     width: 300px;
     height: 120px;
-    background-color: violet;
   }
 }
 
@@ -1112,12 +1111,16 @@ form button .under {
   margin-right: auto;
   overflow: hidden;
   background-color: #99e2d0;
+  /*&:hover .dish-card__inner__name__title {
+  	@media all and (min-width: 992px) {
+  		width: 160px;
+  	}
+  }*/
 }
 @media all and (min-width: 992px) {
   .dish-card__inner {
     width: 300px;
     height: 120px;
-    background-color: green;
   }
 }
 .dish-card__inner__name {
@@ -1132,13 +1135,11 @@ form button .under {
   .dish-card__inner__name {
     width: 255px;
     height: 120px;
-    background-color: wheat;
   }
 }
 .dish-card__inner__name__title {
   width: 262px;
   height: 35px;
-  background-color: brown;
   padding-top: 12px;
   padding-left: 10px;
   font-size: 16px;
@@ -1151,8 +1152,10 @@ form button .under {
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__name__title {
-    width: 217px;
-    height: 120px;
+    padding-top: 40px;
+    width: 250px;
+    height: 80px;
+    z-index: 100;
   }
 }
 .dish-card__inner__name__description {
@@ -1160,20 +1163,21 @@ form button .under {
   height: 35px;
   padding-left: 10px;
   padding-bottom: 5px;
+  padding-top: 10px;
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: normal;
   transform-origin: left;
-  background-color: aqua;
   transition: all 620ms ease-in-out;
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__name__description {
-    width: 217px;
-    height: 120px;
-    background-color: red;
+    padding-top: 0;
+    width: 233px;
+    height: 40px;
+    z-index: 500;
   }
 }
 .dish-card__inner__price {
@@ -1184,15 +1188,32 @@ form button .under {
   transition: all 620ms ease-in-out;
   transform-origin: #99e2d0;
 }
+@media all and (min-width: 992px) {
+  .dish-card__inner__price {
+    height: 120px;
+  }
+}
 .dish-card__inner__price--empty {
   height: 35px;
   background-color: white;
 }
+@media all and (min-width: 992px) {
+  .dish-card__inner__price--empty {
+    height: 80px;
+  }
+}
 .dish-card__inner__price__euros {
   height: 35px;
+  padding-top: 8px;
   background-color: white;
   font-size: 16px;
   font-weight: 700;
+}
+@media all and (min-width: 992px) {
+  .dish-card__inner__price__euros {
+    height: 40px;
+    padding-top: 0;
+  }
 }
 .dish-card__inner--check {
   height: 0;
@@ -1209,14 +1230,29 @@ form button .under {
   transform: translate(0) rotate(0);
   transform-origin: 50% 50%;
 }
+@media all and (min-width: 992px) {
+  .dish-card__inner--check i {
+    top: 56px;
+  }
+}
 .dish-card__inner:hover .dish-card__inner__price {
   transform: translgateX(-60px);
 }
 .dish-card__inner:hover .dish-card__inner--check i {
   transform: translate(-60px) rotate(360deg);
 }
+@media all and (min-width: 992px) {
+  .dish-card__inner:hover .dish-card__inner--check i {
+    transform: translate(-50px) rotate(360deg);
+  }
+}
 .dish-card__inner:hover .dish-card__inner__name p {
   width: 202px;
+}
+@media all and (min-width: 992px) {
+  .dish-card__inner:hover .dish-card__inner__name p {
+    width: 160px;
+  }
 }
 .dish-card__inner:hover .dish-card__inner__price {
   transform: translateX(-60px);
@@ -1435,6 +1471,11 @@ form button .under {
   justify-content: space-between;
   align-items: center;
 }
+@media all and (min-width: 992px) {
+  .titraille {
+    justify-content: center;
+  }
+}
 
 .titraille__like {
   position: relative;
@@ -1523,14 +1564,33 @@ form button .under {
 }
 
 @media all and (min-width: 992px) {
+  .titraille h1 {
+    padding-right: 75px;
+  }
+
   .step-meal {
     display: flex;
     flex-direction: column;
+  }
+  .step-meal h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-bottom: 17px;
+    padding-bottom: 7px;
+    background-image: linear-gradient(to right, #99e2d0, #99e2d0);
+    color: black;
+    background-repeat: no-repeat;
+    background-size: 10% 5px;
+    background-position: center bottom;
   }
 
   .step-meal-2 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 

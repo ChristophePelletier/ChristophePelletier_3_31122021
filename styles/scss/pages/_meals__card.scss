@@ -23,7 +23,6 @@
 	@media all and (min-width: 992px) {
 		width: 300px;
 		height: 120px;
-		background-color:violet;
 	}
 }
 .dish-card__inner {
@@ -38,7 +37,6 @@
 	@media all and (min-width: 992px) {
 		width: 300px;
 		height: 120px;
-		background-color:green;
 	}
 	&__name {
 		display: flex;
@@ -50,12 +48,10 @@
 		@media all and (min-width: 992px) {
 			width: 255px;
 			height: 120px;
-			background-color: wheat;
 		}
 		&__title {
 			width: 262px;
 			height: 35px;
-			background-color:brown;
 			padding-top: 12px;
 			padding-left: 10px;
 			font-size: 16px;
@@ -66,8 +62,10 @@
 			transform-origin: left;
 			@include transition-dish-card;
 			@media all and (min-width: 992px) {
-				width: 217px;
-				height: 120px;
+				padding-top: 40px;
+				width: 250px;
+				height: 80px;
+				z-index:100;
 			}
 		}
 		&__description {
@@ -75,18 +73,19 @@
 			height: 35px;
 			padding-left: 10px;
 			padding-bottom: 5px;
+			padding-top: 10px;
 			font-size: 13px;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			word-break: normal;
 			transform-origin: left;
-			background-color: aqua;
 			@include transition-dish-card;
 			@media all and (min-width: 992px) {
-				width: 217px;
-			height: 120px;
-			background-color:red;
+				padding-top: 0;
+				width: 233px;
+				height: 40px;
+				z-index: 500;
 			}
 		}
 	}
@@ -97,15 +96,26 @@
 		height: 70px;
 		@include transition-dish-card;
 		transform-origin: $tertiary-color;
+		@media all and (min-width: 992px) {
+			height: 120px;
+		}
 		&--empty {
 			height: 35px;
 			background-color: white;
+			@media all and (min-width: 992px) {
+				height: 80px;
+			}
 		}
 		&__euros {
 			height: 35px;
+			padding-top: 8px;
 			background-color: white;
 			font-size: 16px;
 			font-weight: 700;
+			@media all and (min-width: 992px) {
+				height: 40px;
+				padding-top: 0;
+			}
 		}
 	}
 	&--check {
@@ -121,6 +131,9 @@
 			@include transition-dish-card;
 			transform: translate(0) rotate(0);
 			transform-origin: 50% 50%;
+			@media all and (min-width: 992px) {
+				top: 56px;
+			}
 		}
 	}
 	&:hover .dish-card__inner__price {
@@ -128,10 +141,20 @@
 	}
 	&:hover .dish-card__inner--check i {
 		transform: translate(-60px) rotate(360deg);
-	}
+		@media all and (min-width: 992px) {
+			transform: translate(-50px) rotate(360deg);
+	}}
 	&:hover .dish-card__inner__name p {
 		width: 202px;
+		@media all and (min-width: 992px) {
+			width: 160px;
+		}
 	}
+	/*&:hover .dish-card__inner__name__title {
+		@media all and (min-width: 992px) {
+			width: 160px;
+		}
+	}*/
 	&:hover .dish-card__inner__price {
 		transform: translateX(-60px);
 	}
@@ -151,6 +174,9 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	@media all and (min-width: 992px) {
+		justify-content: center;
+	}
 }
 
 .titraille__like {
@@ -199,12 +225,28 @@
 @include button2;
 
 @media all and (min-width: 992px) {
+	.titraille h1
+	{padding-right:75px;}
 	.step-meal {
 		display: flex;
 		flex-direction: column;
+		h2 
+		{text-align:center;
+			font-weight: 500;
+			font-size: 22px;
+			margin-top: 40px;
+			margin-left: 15px;
+			margin-bottom: 17px;
+			padding-bottom: 7px;
+			background-image: linear-gradient(to right, $tertiary-color, $tertiary-color);
+			color: black;
+			background-repeat: no-repeat;
+			background-size: 10% 5px;
+			background-position: center bottom;}
 	}
 	.step-meal-2 {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 }
