@@ -104,6 +104,9 @@
 	padding-left: 15px;
 }
 @media all and (min-width: 768px) {
+	.restaurants {
+		padding-top: 30px;
+	}
 	.cards__wrapper {
 		width: 450px;
 		margin-left: auto;
@@ -113,6 +116,9 @@
 	}
 	.restaurants h2 {
 		text-align: center;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 15px;
 	}
 }
 @media all and (min-width: 993px) {
@@ -128,10 +134,5 @@
 		margin-right: auto;
 		padding-left: 15px;
 		padding-right: 15px;
-	}
-	.restaurants h2 {
-		text-align: center;
-		padding-top: 0;
-		padding-bottom: 0;
 	}
 }

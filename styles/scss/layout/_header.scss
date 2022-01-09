@@ -4,6 +4,8 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media all and (min-width: 768px) {
+	}
 	img {
 		width: 170px;
 		padding-top: 15px;
@@ -18,8 +20,10 @@ header {
 	&__info {
 		display: flex;
 		flex-direction: row;
-
 		height: 65px;
+		@media all and (min-width: 768px) {
+			justify-content: center;
+			}
 		&__logo {
 			width: 375px;
 			p {
@@ -46,6 +50,11 @@ header {
 				position: relative;
 				top: 25px;
 				left: 25px;
+				opacity: 70%;
+				transition: 1s ease-in-out;
+				&:hover {
+					opacity: 1;
+				}
 			}
 			&__accessibility {
 				display: none;
@@ -55,11 +64,20 @@ header {
 	&__deco {
 		height: 255px;
 		width: 375px;
+		@media all and (min-width: 768px) {
+			width: 100%;
+		}
 		img {
 			width: 375px;
 			height: 255px;
 			object-fit: cover;
 			padding-top: 0;
+			@media all and (min-width: 768px) {
+				position:relative;
+				display:inline-block;
+				width: 100%;
+				object-position: 50% 58%;
+			}
 		}
 	}
 }
