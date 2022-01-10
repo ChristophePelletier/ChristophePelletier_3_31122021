@@ -36,10 +36,10 @@ $card-text-height: 80px;
 $card-height: $card-image-height + $card-text-height;
 
 /*loader*/
-$scale0pct: 0%;
-$scale10pct: 2%;
-$scale20pct: 8%;
-$scale50pct: 30%;
-$scale80pct: 70%;
-$scale90pct: 87%;
-$scale100pct: 100%;
+$scale0pct: 0;
+$scale10pct: 0.02;
+$scale20pct: 0.08;
+$scale50pct: 0.3;
+$scale80pct: 0.7;
+$scale90pct: 0.87;
+$scale100pct: 1;

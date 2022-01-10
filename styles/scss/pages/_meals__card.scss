@@ -4,7 +4,7 @@
 	margin-top: -25px;
 	margin-bottom: -25px;
 	padding: 35px 0 45px 0;
-	z-index: index 500;
+	z-index: 99;
 	border-radius: 45px 45px 0 0;
 	background-color: $neutral;
 }
@@ -97,7 +97,7 @@
 		width: 62px;
 		/*2x en plus afin d'éviter le petit trait visible sur petite version via devtools*/
 		height: 70px;
-		background-color:white;
+		background-color: white;
 		@include transition-dish-card;
 		@media all and (min-width: 992px) {
 			height: 120px;
@@ -163,13 +163,13 @@
 @for $i from 1 through 9 {
 	.dish-card-#{$i}-sur-9 {
 		transform-origin: center center;
-		animation: appear#{$i} 4s ease-in-out;
+		animation: appear#{$i} 4.5s ease-in-out;
 	}
 }
 @for $i from 1 through 10 {
 	.dish-card-#{$i}-sur-10 {
 		transform-origin: center center;
-		animation: appear#{$i} 4s ease-in-out;
+		animation: appear#{$i} 4.5s ease-in-out;
 	}
 }
 .titraille {

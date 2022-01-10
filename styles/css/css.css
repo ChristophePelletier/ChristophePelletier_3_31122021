@@ -245,25 +245,25 @@ ul {
 @media all and (min-width: 768px) {
   @keyframes movement__circle__big__screen {
     0% {
-      transform: translateX(-100px) scale(200%, 200%) rotate(0);
+      transform: translateX(-100px) scale(2, 2) rotate(0deg);
     }
     10% {
-      transform: translateX(-80px) scale(200%, 200%) rotate(180);
+      transform: translateX(-80px) scale(2, 2) rotate(180deg);
     }
     20% {
-      transform: translateX(-70px) scale(200%, 200%) rotate(360deg);
+      transform: translateX(-70px) scale(2, 2) rotate(360deg);
     }
     50% {
-      transform: translateX(-45px) scale(200%, 200%) rotate(720deg);
+      transform: translateX(-45px) scale(2, 2) rotate(720deg);
     }
     80% {
-      transform: translateX(200px) scale(200%, 200%) rotate(1000deg);
+      transform: translateX(200px) scale(2, 2) rotate(1000deg);
     }
     85% {
-      transform: translateX(320px) scale(300%, 200%) rotate(1430deg);
+      transform: translateX(320px) scale(3, 2) rotate(1430deg);
     }
     100% {
-      transform: translateX(520px) scale(200%, 200%) rotate(1430deg);
+      transform: translateX(520px) scale(2, 2) rotate(1430deg);
     }
   }
 }
@@ -274,49 +274,49 @@ ul {
     opacity: 0;
   }
   10% {
-    transform: scaleX(2%);
+    transform: scaleX(0.02);
     opacity: 0.05;
   }
   20% {
-    transform: scaleX(8%);
+    transform: scaleX(0.08);
     opacity: 0.01;
   }
   50% {
-    transform: scaleX(30%);
+    transform: scaleX(0.3);
     opacity: 0.2;
   }
   80% {
-    transform: scaleX(70%);
+    transform: scaleX(0.7);
     opacity: 0.6;
   }
   90% {
-    transform: scaleX(87%);
+    transform: scaleX(0.87);
     opacity: 0.8;
   }
   95% {
-    transform: scaleX(100%);
+    transform: scaleX(1);
     opacity: 0.9;
   }
   100% {
-    transform: scaleX(100%);
+    transform: scaleX(1);
     opacity: 1;
   }
 }
 @keyframes scale__bck {
   0% {
-    transform: translateX(-40px) scaleX(100%);
+    transform: translateX(-40px) scaleX(1);
   }
   10% {
     transform: translateX(-5px);
   }
   20% {
-    transform: translateX(10px) scaleX(100%);
+    transform: translateX(10px) scaleX(1);
   }
   50% {
-    transform: translateX(25px) scaleX(100%);
+    transform: translateX(25px) scaleX(1);
   }
   80% {
-    transform: translateX(200px) scaleX(180%);
+    transform: translateX(200px) scaleX(1.8);
   }
   85% {
     transform: translateX(350px);
@@ -350,19 +350,19 @@ ul {
 }
 @keyframes movement__circle {
   0% {
-    transform: translateX(-100px) scaleX(100%) rotate(0);
+    transform: translateX(-100px) scaleX(1) rotate(0deg);
   }
   10% {
-    transform: translateX(-80px) rotate(180);
+    transform: translateX(-80px) rotate(180deg);
   }
   20% {
-    transform: translateX(-70px) scaleX(100%) rotate(360deg);
+    transform: translateX(-70px) scaleX(1) rotate(360deg);
   }
   50% {
-    transform: translateX(-45px) scaleX(100%) rotate(720deg);
+    transform: translateX(-45px) scaleX(1) rotate(720deg);
   }
   80% {
-    transform: translateX(100px) scaleX(250%) rotate(1000deg);
+    transform: translateX(100px) scaleX(2.5) rotate(1000deg);
   }
   90% {
     transform: translateX(160px) rotate(1430deg);
@@ -373,19 +373,19 @@ ul {
 }
 @keyframes scale__bck__big__screen {
   0% {
-    transform: translateX(-40px) scaleX(100%);
+    transform: translateX(-40px) scaleX(1);
   }
   10% {
     transform: translateX(-5px);
   }
   20% {
-    transform: translateX(10px) scaleX(100%);
+    transform: translateX(10px) scaleX(1);
   }
   50% {
-    transform: translateX(25px) scaleX(100%);
+    transform: translateX(25px) scaleX(1);
   }
   80% {
-    transform: translateX(400px) scaleX(180%);
+    transform: translateX(400px) scaleX(1);
   }
   85% {
     transform: translateX(700px);
@@ -423,31 +423,31 @@ ul {
     opacity: 0;
   }
   10% {
-    transform: scaleX(20%);
+    transform: scaleX(2);
     opacity: 0.05;
   }
   20% {
-    transform: scaleX(8%);
+    transform: scaleX(0.08);
     opacity: 0.01;
   }
   50% {
-    transform: scaleX(30%);
+    transform: scaleX(0.3);
     opacity: 0.2;
   }
   80% {
-    transform: scaleX(70%);
+    transform: scaleX(0.7);
     opacity: 0.6;
   }
   85% {
-    transform: scaleX(87%);
+    transform: scaleX(0.87);
     opacity: 0.8;
   }
   90% {
-    transform: scaleX(100%);
+    transform: scaleX(1);
     opacity: 0.9;
   }
   100% {
-    transform: scaleX(100%);
+    transform: scaleX(1);
     opacity: 1;
   }
 }
@@ -1056,7 +1056,7 @@ form button .under {
   margin-top: -25px;
   margin-bottom: -25px;
   padding: 35px 0 45px 0;
-  z-index: index 500;
+  z-index: 99;
   border-radius: 45px 45px 0 0;
   background-color: #f6f6f6;
 }
@@ -1241,11 +1241,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  27% {
+  5.9% {
     opacity: 0;
     transform: translateY(20px);
   }
-  47% {
+  25.9% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1259,11 +1259,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  34% {
+  11.8% {
     opacity: 0;
     transform: translateY(20px);
   }
-  54% {
+  31.8% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1277,11 +1277,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  41% {
+  17.7% {
     opacity: 0;
     transform: translateY(20px);
   }
-  61% {
+  37.7% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1295,11 +1295,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  48% {
+  23.6% {
     opacity: 0;
     transform: translateY(20px);
   }
-  68% {
+  43.6% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1313,11 +1313,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  55% {
+  29.5% {
     opacity: 0;
     transform: translateY(20px);
   }
-  75% {
+  49.5% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1331,11 +1331,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  62% {
+  35.4% {
     opacity: 0;
     transform: translateY(20px);
   }
-  82% {
+  55.4% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1349,11 +1349,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  69% {
+  41.3% {
     opacity: 0;
     transform: translateY(20px);
   }
-  89% {
+  61.3% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1367,11 +1367,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  76% {
+  47.2% {
     opacity: 0;
     transform: translateY(20px);
   }
-  96% {
+  67.2% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1385,11 +1385,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  83% {
+  53.1% {
     opacity: 0;
     transform: translateY(20px);
   }
-  103% {
+  73.1% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1403,11 +1403,11 @@ form button .under {
     opacity: 0;
     transform: translateY(20px);
   }
-  90% {
+  59% {
     opacity: 0;
     transform: translateY(20px);
   }
-  110% {
+  79% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -1418,97 +1418,97 @@ form button .under {
 }
 .dish-card-1-sur-9 {
   transform-origin: center center;
-  animation: appear1 4s ease-in-out;
+  animation: appear1 4.5s ease-in-out;
 }
 
 .dish-card-2-sur-9 {
   transform-origin: center center;
-  animation: appear2 4s ease-in-out;
+  animation: appear2 4.5s ease-in-out;
 }
 
 .dish-card-3-sur-9 {
   transform-origin: center center;
-  animation: appear3 4s ease-in-out;
+  animation: appear3 4.5s ease-in-out;
 }
 
 .dish-card-4-sur-9 {
   transform-origin: center center;
-  animation: appear4 4s ease-in-out;
+  animation: appear4 4.5s ease-in-out;
 }
 
 .dish-card-5-sur-9 {
   transform-origin: center center;
-  animation: appear5 4s ease-in-out;
+  animation: appear5 4.5s ease-in-out;
 }
 
 .dish-card-6-sur-9 {
   transform-origin: center center;
-  animation: appear6 4s ease-in-out;
+  animation: appear6 4.5s ease-in-out;
 }
 
 .dish-card-7-sur-9 {
   transform-origin: center center;
-  animation: appear7 4s ease-in-out;
+  animation: appear7 4.5s ease-in-out;
 }
 
 .dish-card-8-sur-9 {
   transform-origin: center center;
-  animation: appear8 4s ease-in-out;
+  animation: appear8 4.5s ease-in-out;
 }
 
 .dish-card-9-sur-9 {
   transform-origin: center center;
-  animation: appear9 4s ease-in-out;
+  animation: appear9 4.5s ease-in-out;
 }
 
 .dish-card-1-sur-10 {
   transform-origin: center center;
-  animation: appear1 4s ease-in-out;
+  animation: appear1 4.5s ease-in-out;
 }
 
 .dish-card-2-sur-10 {
   transform-origin: center center;
-  animation: appear2 4s ease-in-out;
+  animation: appear2 4.5s ease-in-out;
 }
 
 .dish-card-3-sur-10 {
   transform-origin: center center;
-  animation: appear3 4s ease-in-out;
+  animation: appear3 4.5s ease-in-out;
 }
 
 .dish-card-4-sur-10 {
   transform-origin: center center;
-  animation: appear4 4s ease-in-out;
+  animation: appear4 4.5s ease-in-out;
 }
 
 .dish-card-5-sur-10 {
   transform-origin: center center;
-  animation: appear5 4s ease-in-out;
+  animation: appear5 4.5s ease-in-out;
 }
 
 .dish-card-6-sur-10 {
   transform-origin: center center;
-  animation: appear6 4s ease-in-out;
+  animation: appear6 4.5s ease-in-out;
 }
 
 .dish-card-7-sur-10 {
   transform-origin: center center;
-  animation: appear7 4s ease-in-out;
+  animation: appear7 4.5s ease-in-out;
 }
 
 .dish-card-8-sur-10 {
   transform-origin: center center;
-  animation: appear8 4s ease-in-out;
+  animation: appear8 4.5s ease-in-out;
 }
 
 .dish-card-9-sur-10 {
   transform-origin: center center;
-  animation: appear9 4s ease-in-out;
+  animation: appear9 4.5s ease-in-out;
 }
 
 .dish-card-10-sur-10 {
   transform-origin: center center;
-  animation: appear10 4s ease-in-out;
+  animation: appear10 4.5s ease-in-out;
 }
 
 .titraille {
