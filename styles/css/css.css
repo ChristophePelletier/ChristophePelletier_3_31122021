@@ -1,34 +1,10 @@
+@charset "UTF-8";
+/*couleur*/
+/*dimensions*/
 /*fonctionnement*/
 /*fonctionnement tab et mobile*/
 /*cards*/
 /*loader*/
-/*
-$delai-1: 15%;
-$delai-2: 22%;
-$delai-3: 29%;
-$delai-4: 36%;
-$delai-5: 43%;
-$delai-6: 50%;
-$delai-7: 57%;
-$delai-8: 67%;
-$delai-9: 74%;
-$delais: (
-	entree: (
-		un: $delai-1,
-		deux: $delai-2,
-		trois: $delai-3,
-	),
-	plat: (
-		un: $delai-4,
-		deux: $delai-5,
-		trois: $delai-6,
-	),
-	dessert: (
-		un: $delai-7,
-		deux: $delai-8,
-		trois: $delai-9,
-	),
-);*/
 *,
 *::after,
 *::before {
@@ -629,7 +605,7 @@ footer ul li:nth-child(1) {
   position: relative;
   padding-left: 25px;
 }
-footer ul li:nth-child(1) .test {
+footer ul li:nth-child(1) i {
   position: absolute;
   left: 0;
 }
@@ -637,7 +613,7 @@ footer ul li:nth-child(2) {
   position: relative;
   padding-left: 25px;
 }
-footer ul li:nth-child(2) .test {
+footer ul li:nth-child(2) i {
   position: absolute;
   left: 0;
 }
@@ -805,6 +781,7 @@ footer ul li a {
   content: url(store-solid-2.svg);
 }
 
+/*responsive*/
 @media all and (min-width: 768px) {
   .step-wrapper {
     display: flex;
@@ -928,12 +905,12 @@ form button .under {
   border-width: 0;
 }
 
-::placeholder {
-  color: black;
-}
-
 .hide {
   display: none;
+}
+
+::placeholder {
+  color: black;
 }
 
 .card {
@@ -1074,25 +1051,24 @@ form button .under {
   }
 }
 .interior-page main {
-  background-color: #f6f6f6;
-  z-index: index 500;
-  margin-top: -25px;
   position: relative;
-  padding-top: 35px;
-  border-radius: 45px 45px 0 0;
   top: -25px;
-  padding-bottom: 45px;
+  margin-top: -25px;
   margin-bottom: -25px;
+  padding: 35px 0 45px 0;
+  z-index: index 500;
+  border-radius: 45px 45px 0 0;
+  background-color: #f6f6f6;
 }
 
 .dish-card {
   position: relative;
-  overflow: hidden;
   width: 345px;
   height: 70px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+  overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 3px 6px #999999;
 }
@@ -1100,11 +1076,6 @@ form button .under {
   .dish-card {
     width: 300px;
     height: 120px;
-  }
-}
-@media all and (max-width: 992px) {
-  .dish-card--big-height {
-    height: 100px;
   }
 }
 
@@ -1117,21 +1088,11 @@ form button .under {
   margin-right: auto;
   overflow: hidden;
   background-color: #99e2d0;
-  /*&:hover .dish-card__inner__name__title {
-  	@media all and (min-width: 992px) {
-  		width: 160px;
-  	}
-  }*/
 }
 @media all and (min-width: 992px) {
   .dish-card__inner {
     width: 300px;
     height: 120px;
-  }
-}
-@media all and (max-width: 992px) {
-  .dish-card__inner--big-height {
-    height: 100px;
   }
 }
 .dish-card__inner__name {
@@ -1141,12 +1102,6 @@ form button .under {
   width: 285px;
   height: 70px;
   background-color: white;
-}
-@media all and (max-width: 992px) {
-  .dish-card__inner__name--big-height {
-    height: 100px;
-    background-color: blueviolet;
-  }
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__name {
@@ -1163,31 +1118,27 @@ form button .under {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transform-origin: left;
   z-index: 50;
+  transform-origin: left;
   transition: all 620ms ease-in-out;
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__name__title {
-    padding-top: 40px;
-    width: 250px;
+    width: 190px;
     height: 80px;
     z-index: 100;
-  }
-}
-@media all and (max-width: 992px) {
-  .dish-card__inner__name__title--big-height {
-    height: 60px;
-    background-color: green;
-    z-index: 500;
+    font-size: 18px;
+    padding: 25px 0 20px 10px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: none;
   }
 }
 .dish-card__inner__name__description {
   width: 262px;
   height: 40px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  padding-top: 8px;
+  padding: 8px 0 10px 10px;
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
@@ -1202,25 +1153,21 @@ form button .under {
     width: 233px;
     height: 40px;
     z-index: 500;
+    font-size: 17px;
   }
 }
 .dish-card__inner__price {
   display: flex;
   flex-direction: column;
-  width: 60px;
+  width: 62px;
+  /*2x en plus afin d'éviter le petit trait visible sur petite version via devtools*/
   height: 70px;
+  background-color: white;
   transition: all 620ms ease-in-out;
-  transform-origin: #99e2d0;
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__price {
     height: 120px;
-  }
-}
-@media all and (max-width: 992px) {
-  .dish-card__inner__price--big-height {
-    height: 100px;
-    background-color: red;
   }
 }
 .dish-card__inner__price--empty {
@@ -1234,7 +1181,7 @@ form button .under {
 }
 .dish-card__inner__price__euros {
   height: 35px;
-  padding-top: 7px;
+  padding-top: 5px;
   background-color: white;
   font-size: 16px;
   font-weight: 700;
@@ -1262,11 +1209,9 @@ form button .under {
 }
 @media all and (min-width: 992px) {
   .dish-card__inner--check i {
-    top: 56px;
+    top: 52px;
+    left: 12px;
   }
-}
-.dish-card__inner:hover .dish-card__inner__price {
-  transform: translgateX(-60px);
 }
 .dish-card__inner:hover .dish-card__inner--check i {
   transform: translate(-60px) rotate(360deg);
@@ -1286,11 +1231,6 @@ form button .under {
 }
 .dish-card__inner:hover .dish-card__inner__name__title {
   width: 202px;
-}
-@media all and (min-width: 992px) {
-  .dish-card__inner:hover .dish-card__inner__name__title {
-    width: 160px;
-  }
 }
 .dish-card__inner:hover .dish-card__inner__price {
   transform: translateX(-60px);
@@ -1577,7 +1517,7 @@ form button .under {
   justify-content: space-between;
   align-items: center;
 }
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   .titraille {
     justify-content: center;
   }
@@ -1670,6 +1610,59 @@ form button .under {
   background: linear-gradient(180deg, #ff93e1, #a16be0);
 }
 
+/*responsive*/
+@media all and (min-width: 769px) and (max-width: 991px) {
+  .titraille h1 {
+    padding-right: 75px;
+  }
+
+  .interior-page h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-bottom: 17px;
+    padding-bottom: 7px;
+    background-image: linear-gradient(to right, #99e2d0, #99e2d0);
+    color: black;
+    background-repeat: no-repeat;
+    background-size: 20% 5px !important;
+    background-position: center bottom;
+  }
+}
+@media all and (max-width: 992px) {
+  .dish-card--big-height,
+.dish-card__inner--big-height,
+.dish-card__inner__name--big-height,
+.dish-card__inner__price--big-height {
+    height: 100px;
+  }
+
+  h3.dish-card__inner__name__title--big-height {
+    height: 65px;
+    padding-top: 20px;
+    z-index: 500;
+    line-height: 20px;
+    white-space: normal;
+  }
+
+  .dish-card__inner__name__description--big-height {
+    height: 35px;
+  }
+
+  .dish-card__inner__price--empty--big-height {
+    height: 65px;
+  }
+
+  .dish-card__inner__price__euros--big-height {
+    height: 35px;
+  }
+
+  i.big-height {
+    top: 41px;
+  }
+}
 @media all and (min-width: 992px) {
   .titraille h1 {
     padding-right: 75px;
@@ -1698,12 +1691,6 @@ form button .under {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-@media all and (max-width: 992px) {
-  .dish-card__inner__name__description--big-height {
-    background-color: coral;
-    height: 40px;
   }
 }
 

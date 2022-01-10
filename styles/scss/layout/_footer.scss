@@ -20,7 +20,7 @@ footer {
 			&:nth-child(1) {
 				position: relative;
 				padding-left: 25px;
-				.test {
+				i {
 					position: absolute;
 					left: 0;
 				}
@@ -28,15 +28,21 @@ footer {
 			&:nth-child(2) {
 				position: relative;
 				padding-left: 25px;
-				.test {
+				i {
 					position: absolute;
 					left: 0;
 				}
 			}
-			a 
-			{color:white;};
+			a {
+				color: white;
+			}
 		}
 	}
 }
-@media all and (min-width: 768px){
-footer{	display:flex;flex-direction:row; justify-content:space-around}}
+@media all and (min-width: 768px) {
+	footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}

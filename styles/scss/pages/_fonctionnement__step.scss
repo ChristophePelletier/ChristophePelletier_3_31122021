@@ -10,7 +10,6 @@
 		padding-left: 15px;
 	}
 }
-
 .step {
 	width: $step-width;
 	height: $step-height;
@@ -22,12 +21,12 @@
 	margin-left: 30px;
 	margin-bottom: 20px;
 	word-wrap: break-word;
-			overflow-wrap: break-word;
+	overflow-wrap: break-word;
 	@media all and (min-width: 768px) {
 		width: $step-width-tablette;
 		height: $step-height-tablette;
 		margin-bottom: 0;
-		margin-right:10px;
+		margin-right: 10px;
 	}
 	i {
 		color: $neutral-dark;
@@ -89,14 +88,14 @@
 		font-size: 17px;
 		@media all and (min-width: 768px) {
 			max-width: 140px;
-			padding-top:15px;
-			line-height:22px;
+			padding-top: 15px;
+			line-height: 22px;
 			height: $step-height-tablette;
 			left: $step__number-width-tablette + $step__pic-width-tablette;
 			padding-left: 5px;
 			word-wrap: break-word;
 			overflow-wrap: break-word;
-			font-size:18px;
+			font-size: 18px;
 		}
 	}
 	&:hover {
@@ -144,15 +143,17 @@
 		content: url(store-solid-2.svg);
 	}
 }
-
+/*responsive*/
 @media all and (min-width: 768px) {
 	.step-wrapper {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 	}
-	.fonctionnement
-	{padding-top:30px;}
-	.fonctionnement h2 
-	{text-align: center;}
+	.fonctionnement {
+		padding-top: 30px;
+	}
+	.fonctionnement h2 {
+		text-align: center;
+	}
 }

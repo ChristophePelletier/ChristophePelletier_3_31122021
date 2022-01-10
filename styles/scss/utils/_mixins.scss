@@ -38,33 +38,6 @@
 		}
 	}
 }
-/*
-$delai-1: 15%;
-$delai-2: 22%;
-$delai-3: 29%;
-$delai-4: 36%;
-$delai-5: 43%;
-$delai-6: 50%;
-$delai-7: 57%;
-$delai-8: 67%;
-$delai-9: 74%;
-$delais: (
-	entree: (
-		un: $delai-1,
-		deux: $delai-2,
-		trois: $delai-3,
-	),
-	plat: (
-		un: $delai-4,
-		deux: $delai-5,
-		trois: $delai-6,
-	),
-	dessert: (
-		un: $delai-7,
-		deux: $delai-8,
-		trois: $delai-9,
-	),
-);*/
 
 @mixin button2($width: 180px) {
 	.btn2 {
@@ -115,4 +88,3 @@ $delais: (
 		}
 	}
 }
-

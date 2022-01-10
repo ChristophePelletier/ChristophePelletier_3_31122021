@@ -34,7 +34,7 @@ form {
 		z-index: 1;
 		&:focus {
 			border: 3px solid $primary-color;
-			border-radius:5px;
+			border-radius: 5px;
 			outline: 0;
 			background-color: $neutral-intermediary;
 		}
@@ -68,7 +68,6 @@ form {
 		}
 	}
 }
-
 .accessibility {
 	position: absolute;
 	width: 1px;
@@ -79,10 +78,9 @@ form {
 	white-space: nowrap;
 	border-width: 0;
 }
-::placeholder {
-	color: black;
-}
-
 .hide {
 	display: none;
+}
+::placeholder {
+	color: black;
 }
