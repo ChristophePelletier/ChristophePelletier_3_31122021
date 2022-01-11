@@ -26,7 +26,7 @@ body {
 @media all and (min-width: 768px) {
   body {
     max-width: 750px;
-    background-color: #7e7e7e;
+    background-color: #99e2d0;
   }
 }
 @media all and (min-width: 993px) {
@@ -53,19 +53,6 @@ ul {
   list-style-type: none;
 }
 
-.restaurants {
-  background-color: #f6f6f6;
-  padding-top: 60px;
-  padding-bottom: 65px;
-}
-.restaurants h2 {
-  padding-bottom: 30px;
-}
-
-.menu {
-  background-color: #f6f6f6;
-}
-
 .loader__wrapper {
   position: fixed;
   top: 0;
@@ -78,13 +65,10 @@ ul {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: 5;
   background-color: #99e2d0;
-  opacity: 1;
-  transition: opacity 1s;
+  opacity: 0;
   width: 100%;
   height: 100%;
   animation: loader_after 3s ease-in-out both;
@@ -103,16 +87,16 @@ ul {
 @keyframes disappear {
   0% {
     opacity: 1;
-    z-index: 5000;
+    z-index: 99;
   }
   97% {
     opacity: 1;
-    z-index: 5000;
+    z-index: 99;
     animation-timing-function: ease-in-out;
   }
   100% {
     opacity: 0;
-    z-index: -50000;
+    z-index: -99;
   }
 }
 @keyframes appear {
@@ -267,7 +251,6 @@ ul {
     }
   }
 }
-/*Keyframes*/
 @keyframes fill {
   0% {
     transform: scaleX(0);
@@ -422,9 +405,13 @@ ul {
     transform: scaleX(0);
     opacity: 0;
   }
+  5% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
   10% {
-    transform: scaleX(2);
-    opacity: 0.05;
+    transform: scaleX(0.02);
+    opacity: 0.01;
   }
   20% {
     transform: scaleX(0.08);
@@ -487,7 +474,7 @@ ul {
   box-shadow: 0 3px 6px black;
   opacity: 0;
   border-radius: 25px;
-  transition: opacity 1s;
+  transition: opacity 500ms ease-in-out;
   background: linear-gradient(180deg, #ff93e1, #a16be0);
 }
 
@@ -654,7 +641,6 @@ footer ul li a {
   margin-left: 30px;
   margin-bottom: 20px;
   word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 @media all and (min-width: 768px) {
   .step {
@@ -755,7 +741,7 @@ footer ul li a {
   box-shadow: 0 3px 6px #848484;
   opacity: 0;
   z-index: -1;
-  transition: opacity 1250ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .step:hover p.step__pic::after {
   opacity: 1;
@@ -769,7 +755,7 @@ footer ul li a {
   border-radius: 30px/20px;
   opacity: 0;
   z-index: 25;
-  transition: opacity 1250ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 .step__pic__un::after {
   content: url(mobile-screen-button-solid-2.svg);
@@ -891,7 +877,7 @@ form button .under {
   left: 0;
   height: 45px;
   width: 45px;
-  transition: opacity 2s;
+  transition: opacity 500ms ease-in-out;
 }
 
 .accessibility {
@@ -1006,7 +992,7 @@ form button .under {
   bottom: 0;
   opacity: 0;
   z-index: 10;
-  transition: opacity 2s linear;
+  transition: opacity 500ms ease-in-out;
   height: 20px;
   width: 20px;
 }
@@ -1050,15 +1036,13 @@ form button .under {
     padding-right: 15px;
   }
 }
-.interior-page main {
-  position: relative;
-  top: -25px;
-  margin-top: -25px;
-  margin-bottom: -25px;
-  padding: 35px 0 45px 0;
-  z-index: 99;
-  border-radius: 45px 45px 0 0;
+.restaurants {
   background-color: #f6f6f6;
+  padding-top: 60px;
+  padding-bottom: 65px;
+}
+.restaurants h2 {
+  padding-bottom: 30px;
 }
 
 .dish-card {
@@ -1111,16 +1095,17 @@ form button .under {
 }
 .dish-card__inner__name__title {
   width: 260px;
-  height: 40px;
-  padding-top: 17px;
+  height: 45px;
+  padding-top: 15px;
   padding-left: 10px;
+  padding-bottom: 15px;
   font-size: 17px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   z-index: 50;
   transform-origin: left;
-  transition: all 620ms ease-in-out;
+  transition: all 2s;
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__name__title {
@@ -1137,15 +1122,15 @@ form button .under {
 }
 .dish-card__inner__name__description {
   width: 262px;
-  height: 40px;
-  padding: 8px 0 10px 10px;
+  height: 25px;
+  padding: 0 0 10px 10px;
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: normal;
   transform-origin: left;
-  transition: all 620ms ease-in-out;
+  transition: all 2s;
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__name__description {
@@ -1163,7 +1148,7 @@ form button .under {
   /*2x en plus afin d'éviter le petit trait visible sur petite version via devtools*/
   height: 70px;
   background-color: white;
-  transition: all 620ms ease-in-out;
+  transition: all 2s;
 }
 @media all and (min-width: 992px) {
   .dish-card__inner__price {
@@ -1181,7 +1166,7 @@ form button .under {
 }
 .dish-card__inner__price__euros {
   height: 35px;
-  padding-top: 5px;
+  padding-top: 9px;
   background-color: white;
   font-size: 16px;
   font-weight: 700;
@@ -1203,7 +1188,7 @@ form button .under {
   left: 18px;
   top: 26px;
   z-index: 1000;
-  transition: all 620ms ease-in-out;
+  transition: all 2s;
   transform: translate(0) rotate(0);
   transform-origin: 50% 50%;
 }
@@ -1665,7 +1650,7 @@ form button .under {
 }
 @media all and (min-width: 992px) {
   .titraille h1 {
-    padding-right: 75px;
+    padding-right: 5px;
   }
 
   .step-meal {
@@ -1692,6 +1677,16 @@ form button .under {
     flex-direction: row;
     justify-content: space-between;
   }
+}
+.interior-page main {
+  position: relative;
+  top: -25px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+  padding: 35px 0 45px 0;
+  z-index: 99;
+  border-radius: 45px 45px 0 0;
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=css.css.map */

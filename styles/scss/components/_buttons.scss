@@ -35,7 +35,7 @@
 		@include shadow($neutral-deep-dark);
 		opacity: 0;
 		border-radius: 25px;
-		transition: opacity 1s;
+		@include button-transition;
 		background: linear-gradient(
 			180deg,
 			lighten($secondary-color, 5%),

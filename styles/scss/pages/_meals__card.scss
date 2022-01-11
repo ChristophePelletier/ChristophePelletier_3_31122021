@@ -1,13 +1,3 @@
-.interior-page main {
-	position: relative;
-	top: -25px;
-	margin-top: -25px;
-	margin-bottom: -25px;
-	padding: 35px 0 45px 0;
-	z-index: 99;
-	border-radius: 45px 45px 0 0;
-	background-color: $neutral;
-}
 .dish-card {
 	position: relative;
 	width: 345px;
@@ -49,9 +39,10 @@
 		}
 		&__title {
 			width: 260px;
-			height: 40px;
-			padding-top: 17px;
+			height: 45px;
+			padding-top: 15px;
 			padding-left: 10px;
+			padding-bottom:15px;
 			font-size: 17px;
 			white-space: nowrap;
 			overflow: hidden;
@@ -73,8 +64,8 @@
 		}
 		&__description {
 			width: 262px;
-			height: 40px;
-			padding: 8px 0 10px 10px;
+			height: 25px;
+			padding: 0 0 10px 10px;
 			font-size: 13px;
 			white-space: nowrap;
 			overflow: hidden;
@@ -111,7 +102,7 @@
 		}
 		&__euros {
 			height: 35px;
-			padding-top: 5px;
+			padding-top: 9px;
 			background-color: white;
 			font-size: 16px;
 			font-weight: 700;
@@ -275,7 +266,7 @@
 }
 @media all and (min-width: 992px) {
 	.titraille h1 {
-		padding-right: 75px;
+		padding-right: 5px;
 	}
 	.step-meal {
 		display: flex;
@@ -304,4 +295,15 @@
 		flex-direction: row;
 		justify-content: space-between;
 	}
+}
+
+.interior-page main {
+	position: relative;
+	top: -25px;
+	margin-top: -25px;
+	margin-bottom: -25px;
+	padding: 35px 0 45px 0;
+	z-index: 99;
+	border-radius: 45px 45px 0 0;
+	background-color: $neutral;
 }

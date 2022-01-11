@@ -15,7 +15,7 @@ body {
 	color: black;
 	@media all and (min-width: 768px) {
 		max-width: $max-width-tablette;
-		background-color: $neutral-dark;
+		background-color: $tertiary-color;
 	}
 	@media all and (min-width: 993px) {
 		max-width: $max-width-desktop;
@@ -35,14 +35,5 @@ h2 {
 ul {
 	list-style-type: none;
 }
-.restaurants {
-	background-color: $neutral;
-	padding-top: 60px;
-	padding-bottom: 65px;
-	h2 {
-		padding-bottom: 30px;
-	}
-}
-.menu {
-	background-color: $neutral;
-}
+
+

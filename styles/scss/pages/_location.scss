@@ -64,7 +64,7 @@ form {
 			left: 0;
 			height: 45px;
 			width: 45px;
-			transition: opacity 2s;
+			@include button-transition;
 		}
 	}
 }

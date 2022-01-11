@@ -9,14 +9,10 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		right: 0;
-		bottom: 0;
 		left: 0;
 		z-index: 5;
 		background-color: $tertiary-color;
-
-		opacity: 1;
-		transition: opacity 1s;
+		opacity: 0;
 		width: 100%;
 		height: 100%;
 		animation: loader_after 3s ease-in-out both;
@@ -34,16 +30,16 @@
 @keyframes disappear {
 	0% {
 		opacity: 1;
-		z-index: 5000;
+		z-index:99;
 	}
 	97% {
 		opacity: 1;
-		z-index: 5000;
+		z-index: 99;
 		animation-timing-function: ease-in-out;
 	}
 	100% {
 		opacity: 0;
-		z-index: -50000;
+		z-index: -99;
 	}
 }
 @keyframes appear {
@@ -187,7 +183,6 @@
 		}
 	}
 }
-/*Keyframes*/
 @keyframes fill {
 	0% {
 		transform: scaleX(0);
@@ -343,9 +338,13 @@
 		transform: scaleX(0);
 		opacity: 0;
 	}
+	5% {
+		transform: scaleX(0);
+		opacity: 0;
+	}
 	10% {
-		transform: scaleX(2);
-		opacity: 0.05;
+		transform: scaleX($scale10pct);
+		opacity: 0.01;
 	}
 	20% {
 		transform: scaleX($scale20pct);
