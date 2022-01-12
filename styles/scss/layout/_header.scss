@@ -52,7 +52,7 @@ header {
 				top: 35px;
 				left: 15px;
 				opacity: 70%;
-				transition: 1s ease-in-out;
+				@include button-transition;
 				&:hover {
 					opacity: 1;
 				}

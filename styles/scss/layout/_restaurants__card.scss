@@ -24,7 +24,7 @@
 		z-index: 1;
 		position: absolute;
 		@include shadow($tertiary-color);
-		transition: opacity 200ms ease-in-out;
+		@include card-transition;
 	}
 	img {
 		position: relative;

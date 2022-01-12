@@ -36,4 +36,13 @@ ul {
 	list-style-type: none;
 }
 
-
+.interior-page main {
+	position: relative;
+	top: -25px;
+	margin-top: -25px;
+	margin-bottom: -25px;
+	padding: 35px 0 45px 0;
+	z-index: 99;
+	border-radius: 45px 45px 0 0;
+	background-color: $neutral;
+}

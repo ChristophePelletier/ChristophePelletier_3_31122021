@@ -1,3 +1,15 @@
+@mixin button-transition
+{
+transition: opacity 500ms ease-in-out;
+}
+@mixin card-transition
+{
+transition: opacity 450ms ease-in-out;
+}
+@mixin meal-transition {
+	transition: all 675ms ease-in-out;
+}
+
 @mixin shadow($color: $neutral-dark) {
 	box-shadow: 0 3px 6px darken($color, 40%);
 }
@@ -30,15 +42,3 @@
 		}
 	}
 }
-@mixin button-transition
-{
-transition: opacity 500ms ease-in-out;
-}
-@mixin card-transition
-{
-transition: opacity 500ms ease-in-out;
-}
-@mixin transition-dish-card {
-	transition: all 2s;
-}
-

@@ -49,7 +49,7 @@
 			text-overflow: ellipsis;
 			z-index: 50;
 			transform-origin: left;
-			@include transition-dish-card;
+			@include meal-transition;
 			@media all and (min-width: 992px) {
 				width: 190px;
 				height: 80px;
@@ -72,7 +72,7 @@
 			text-overflow: ellipsis;
 			word-break: normal;
 			transform-origin: left;
-			@include transition-dish-card;
+			@include meal-transition;
 			@media all and (min-width: 992px) {
 				padding-top: 0;
 				width: 233px;
@@ -89,7 +89,7 @@
 		/*2x en plus afin d'éviter le petit trait visible sur petite version via devtools*/
 		height: 70px;
 		background-color: white;
-		@include transition-dish-card;
+		@include meal-transition;
 		@media all and (min-width: 992px) {
 			height: 120px;
 		}
@@ -122,7 +122,7 @@
 			left: 18px;
 			top: 26px;
 			z-index: 1000;
-			@include transition-dish-card;
+			@include meal-transition;
 			transform: translate(0) rotate(0);
 			transform-origin: 50% 50%;
 			@media all and (min-width: 992px) {
@@ -178,6 +178,9 @@
 	right: 36px;
 	height: 30px;
 	width: 30px;
+	@media all and (min-width: 992px) {
+		right: -10px;
+	}
 }
 .titraille__like:hover .titraille__like--fill {
 	opacity: 1;
@@ -189,7 +192,7 @@
 	right: 0;
 	opacity: 0;
 	z-index: 10;
-	transition: opacity 2s linear;
+	@include button-transition;
 	height: 30px;
 	width: 30px;
 }
@@ -296,13 +299,4 @@
 	}
 }
 
-.interior-page main {
-	position: relative;
-	top: -25px;
-	margin-top: -25px;
-	margin-bottom: -25px;
-	padding: 35px 0 45px 0;
-	z-index: 99;
-	border-radius: 45px 45px 0 0;
-	background-color: $neutral;
-}
+
