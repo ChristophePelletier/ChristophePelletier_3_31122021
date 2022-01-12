@@ -1,13 +1,19 @@
 .btn {
 	position: relative;
 	display: block;
-	width: 220px;
-	height: 50px;
 	background: linear-gradient(180deg, $secondary-color, $primary-color);
 	border-radius: 25px;
 	margin-left: auto;
 	margin-right: auto;
 	@include shadow($neutral);
+	&__large {
+		width: 220px;
+		height: 50px;
+	}
+	&__narrow {
+		width: 220px;
+		height: 50px;
+	}
 	p {
 		color: white;
 		display: flex;

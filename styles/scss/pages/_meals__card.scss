@@ -212,8 +212,7 @@
 	background-size: 14% 3px;
 	background-position: left bottom;
 }
-@include button2;
-/*responsive*/
+
 @media all and (min-width: 769px) and (max-width: 991px) {
 	.titraille h1 {
 		padding-right: 75px;

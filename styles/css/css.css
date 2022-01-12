@@ -2,7 +2,7 @@
 /*couleur*/
 /*dimensions*/
 /*fonctionnement*/
-/*fonctionnement tab et mobile*/
+/*fonctionnement tablette et desktop*/
 /*cards*/
 /*loader*/
 *,
@@ -53,7 +53,7 @@ ul {
   list-style-type: none;
 }
 
-.loader__wrapper {
+.loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +61,7 @@ ul {
   background-color: #1b6150;
   width: 100%;
 }
-.loader__wrapper::after {
+.loader::after {
   content: "";
   position: absolute;
   top: 0;
@@ -113,16 +113,7 @@ ul {
     opacity: 1;
   }
 }
-.index header,
-.location-form,
-.presentation,
-.fonctionnement,
-.restaurants,
-.index footer {
-  animation: appear 3s ease-in-out;
-}
-
-.loader {
+.loader__content {
   margin-left: auto;
   margin-right: auto;
   width: 350px;
@@ -134,12 +125,12 @@ ul {
   box-shadow: 0 3px 6px #181818;
 }
 @media all and (min-width: 768px) {
-  .loader {
+  .loader__content {
     width: 700px;
     height: 160px;
   }
 }
-.loader__bck {
+.loader__content__bck {
   position: relative;
   background-color: #9356dc;
   width: 350px;
@@ -150,12 +141,12 @@ ul {
   z-index: 10;
 }
 @media all and (min-width: 768px) {
-  .loader__bck {
+  .loader__content__bck {
     width: 700px;
     height: 160px;
   }
 }
-.loader .circle {
+.loader__content__circle {
   z-index: 20;
   position: relative;
   width: 20px;
@@ -168,13 +159,13 @@ ul {
   animation: movement__circle 2.5s ease-in-out both;
 }
 @media all and (min-width: 768px) {
-  .loader .circle {
+  .loader__content__circle {
     left: -30px;
     top: -200px;
     animation: movement__circle__big__screen 2.5s ease-in-out both;
   }
 }
-.loader__ohmyfood-bck {
+.loader__content__ohmyfood-bck {
   position: relative;
   top: -40px;
   left: -80px;
@@ -189,7 +180,7 @@ ul {
   text-align: center;
 }
 @media all and (min-width: 768px) {
-  .loader__ohmyfood-bck {
+  .loader__content__ohmyfood-bck {
     top: -60px;
     left: -160px;
     padding-top: 8px;
@@ -198,7 +189,7 @@ ul {
     animation: scale__bck__big__screen 2.5s ease-in-out both;
   }
 }
-.loader__ohmyfood-txt {
+.loader__content__ohmyfood-txt {
   position: relative;
   top: -80px;
   left: -80px;
@@ -214,7 +205,7 @@ ul {
   text-align: center;
 }
 @media all and (min-width: 768px) {
-  .loader__ohmyfood-txt {
+  .loader__content__ohmyfood-txt {
     top: -130px;
     left: -165px;
     padding-left: 5px;
@@ -270,15 +261,15 @@ ul {
   }
   80% {
     transform: scaleX(0.7);
-    opacity: 0.6;
+    opacity: 0.5;
   }
   90% {
     transform: scaleX(0.87);
-    opacity: 0.8;
+    opacity: 0.7;
   }
   95% {
     transform: scaleX(1);
-    opacity: 0.9;
+    opacity: 0.8;
   }
   100% {
     transform: scaleX(1);
@@ -423,31 +414,46 @@ ul {
   }
   80% {
     transform: scaleX(0.7);
-    opacity: 0.6;
+    opacity: 0.5;
   }
   85% {
     transform: scaleX(0.87);
-    opacity: 0.8;
+    opacity: 0.7;
   }
   90% {
     transform: scaleX(1);
-    opacity: 0.9;
+    opacity: 0.8;
   }
   100% {
     transform: scaleX(1);
     opacity: 1;
   }
 }
+.index header,
+.location-form,
+.presentation,
+.fonctionnement,
+.restaurants,
+.index footer {
+  animation: appear 3s ease-in-out;
+}
+
 .btn {
   position: relative;
   display: block;
-  width: 220px;
-  height: 50px;
   background: linear-gradient(180deg, #ff79da, #9356dc);
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 3px 6px #909090;
+}
+.btn__large {
+  width: 220px;
+  height: 50px;
+}
+.btn__narrow {
+  width: 220px;
+  height: 50px;
 }
 .btn p {
   color: white;
@@ -758,13 +764,13 @@ footer ul li a {
   transition: opacity 500ms ease-in-out;
 }
 .step__pic__un::after {
-  content: url(mobile-screen-button-solid-2.svg);
+  content: url(../../images/pictos/mobile-screen-button-solid-2.svg);
 }
 .step__pic__deux::after {
-  content: url(list-solid-2.svg);
+  content: url(../../images/pictos/list-solid-2.svg);
 }
 .step__pic__trois::after {
-  content: url(store-solid-2.svg);
+  content: url(../../images/pictos/store-solid-2.svg);
 }
 
 /*responsive*/
@@ -1553,49 +1559,6 @@ form button .under {
   background-position: left bottom;
 }
 
-.btn2 {
-  position: relative;
-  display: block;
-  width: 220px;
-  height: 50px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  background: linear-gradient(180deg, #ff79da, #9356dc);
-  border-radius: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 3px 6px #909090;
-}
-.btn2 p {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-}
-.btn2 p .text {
-  position: absolute;
-  z-index: 100;
-}
-.btn2:hover::after {
-  opacity: 1;
-}
-.btn2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  box-shadow: 0 3px 6px black;
-  opacity: 0;
-  border-radius: 25px;
-  transition: opacity 1s;
-  background: linear-gradient(180deg, #ff93e1, #a16be0);
-}
-
-/*responsive*/
 @media all and (min-width: 769px) and (max-width: 991px) {
   .titraille h1 {
     padding-right: 75px;
