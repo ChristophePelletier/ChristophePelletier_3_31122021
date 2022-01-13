@@ -151,7 +151,29 @@
 	}
 }
 /*Apparition des cards*/
-@include dish-appear;
+
+@for $i from 1 through 10 {
+	@keyframes appear#{$i} {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+
+		#{$delai + $i*5.9%} {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		#{$delai+($i*5.9%) + 20%} {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}
 @for $i from 1 through 9 {
 	.dish-card-#{$i}-sur-9 {
 		transform-origin: center center;
