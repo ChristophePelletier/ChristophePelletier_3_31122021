@@ -67,6 +67,9 @@ header {
 		@media all and (min-width: 768px) {
 			width: 100%;
 		}
+		@media all and (max-width: 370px) {
+			width: 100%;
+		}
 		img {
 			width: 375px;
 			height: 255px;
@@ -77,6 +80,9 @@ header {
 				display:inline-block;
 				width: 100%;
 				object-position: 50% 58%;
+			}
+			@media all and (max-width: 370px) {
+				width: 100%;
 			}
 		}
 	}
