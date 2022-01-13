@@ -102,19 +102,14 @@
 			opacity: 1;
 		}
 	}
-	&:after {
+	&::after {
 		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		@include position--after;
 		border-radius: 30px/20px;
 		background-color: lighten($primary-color, 32%);
 		@include shadow($neutral-intermediary);
-		opacity: 0;
-		z-index: -1;
 		@include card-transition;
+		z-index:-10;
 	}
 	&:hover {
 		p.step__pic::after {
@@ -122,15 +117,9 @@
 		}
 	}
 	&__pic::after {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		border-radius: 30px/20px;
-		opacity: 0;
-		z-index: 25;
+		@include position--after;
 		@include button-transition;
+		border-radius: 30px/20px;
 	}
 	&__pic__un::after {
 		content: url(../../images/pictos/mobile-screen-button-solid-2.svg);

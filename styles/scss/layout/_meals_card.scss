@@ -151,7 +151,6 @@
 	}
 }
 /*Apparition des cards*/
-
 @for $i from 1 through 10 {
 	@keyframes appear#{$i} {
 		0% {
@@ -167,7 +166,6 @@
 			opacity: 1;
 			transform: translateY(0px);
 		}
-
 		100% {
 			opacity: 1;
 			transform: translateY(0px);
@@ -206,7 +204,6 @@
 		right: -10px;
 	}
 }
-
 .titraille__like:hover {
 	cursor: pointer;
 }
@@ -222,13 +219,10 @@
 }
 .titraille__like::after {
 	content: url(../../images/pictos/heart-solid.svg);
-	opacity: 0;
 	z-index: 0;
-	position: absolute;
 	height: 30px;
 	width: 30px;
-	top: 0;
-	left: 0;
+	@include position--after;
 	@include button-transition;
 }
 @media all and (max-width: 992px) {
@@ -236,31 +230,6 @@
 		cursor: pointer;
 	}
 }
-
-/*
-.titraille__like:active,
-.titraille__like:hover {
-	cursor: pointer;
-	z-index: 99;
-}
-
-}
-@media all and (min-width: 993px) {
-	.titraille__like:hover .titraille__like--fill {
-		opacity: 1;
-	}
-}
-.titraille__like--fill {
-	position: absolute;
-	top: 0;
-	right: 0;
-	opacity: 0;
-	z-index: 10;
-	@include button-transition;
-	height: 30px;
-	width: 30px;
-}
-*/
 .interior-page h1 {
 	padding-left: 15px;
 	font-family: "Shrikhand", cursive;
