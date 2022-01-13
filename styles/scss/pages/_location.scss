@@ -20,6 +20,9 @@ form {
 	margin-right: auto;
 	height: 45px;
 	background-color: $neutral-intermediary;
+	@media all and (max-width: 370px) {
+		width: 250px;
+	}
 	input {
 		display: block;
 		position: absolute;
@@ -32,6 +35,10 @@ form {
 		font-size: 18px;
 		max-width: 240px;
 		z-index: 1;
+		@media all and (max-width: 370px) {
+			width: 150px;
+			left: 50px;
+		}
 		&:focus {
 			border: 3px solid $primary-color;
 			border-radius: 5px;
@@ -48,6 +55,9 @@ form {
 		background-color: $neutral-intermediary;
 		color: black;
 		border: none;
+		@media all and (max-width: 370px) {
+			left: 15px;
+		}
 		&:hover {
 			cursor: pointer;
 		}

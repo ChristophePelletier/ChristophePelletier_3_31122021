@@ -9,6 +9,9 @@
 	@include radius;
 	@include shadow($neutral);
 	z-index: 2;
+	@media all and (max-width: 370px) {
+		max-width: 300px;
+	}
 	&:hover {
 		&::after {
 			opacity: 1;
@@ -25,6 +28,9 @@
 		position: absolute;
 		@include shadow($tertiary-color);
 		@include card-transition;
+		@media all and (max-width: 370px) {
+			max-width: 300px;
+		}
 	}
 	img {
 		position: relative;
@@ -33,7 +39,11 @@
 		object-fit: cover;
 		border-radius: 15px 15px 0 0;
 		z-index: 50;
+		@media all and (max-width: 370px) {
+			max-width: 300px;
+		}
 	}
+	
 	&__image {
 		position: relative;
 		p {
@@ -78,6 +88,9 @@
 			z-index: 10;
 			height: 25px;
 			width: 29px;
+			@media all and (max-width: 370px) {
+				margin-left: -75px;
+			}
 			@media all and (max-width: 992px) {
 				&:active {
 					& .card__text__like--fill {
