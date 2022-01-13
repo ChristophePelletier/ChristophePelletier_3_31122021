@@ -30,7 +30,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		width: 285px;
+		width: 288px;
+		/*3px en plus afin d'éviter le petit trait visible sur petite version via devtools*/
 		height: 70px;
 		background-color: white;
 		@media all and (min-width: 992px) {
@@ -85,8 +86,8 @@
 	&__price {
 		display: flex;
 		flex-direction: column;
-		width: 62px;
-		/*2x en plus afin d'éviter le petit trait visible sur petite version via devtools*/
+		width: 63px;
+		/*3px en plus afin d'éviter le petit trait visible sur petite version via devtools*/
 		height: 70px;
 		background-color: white;
 		@include meal-transition;
@@ -98,6 +99,7 @@
 			background-color: white;
 			@media all and (min-width: 992px) {
 				height: 80px;
+				width: 63px;
 			}
 		}
 		&__euros {

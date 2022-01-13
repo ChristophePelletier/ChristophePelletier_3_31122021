@@ -673,7 +673,8 @@ footer ul li a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 285px;
+  width: 288px;
+  /*3px en plus afin d'éviter le petit trait visible sur petite version via devtools*/
   height: 70px;
   background-color: white;
 }
@@ -734,8 +735,8 @@ footer ul li a {
 .dish-card__inner__price {
   display: flex;
   flex-direction: column;
-  width: 62px;
-  /*2x en plus afin d'éviter le petit trait visible sur petite version via devtools*/
+  width: 63px;
+  /*3px en plus afin d'éviter le petit trait visible sur petite version via devtools*/
   height: 70px;
   background-color: white;
   transition: all 675ms ease-in-out;
@@ -752,6 +753,7 @@ footer ul li a {
 @media all and (min-width: 992px) {
   .dish-card__inner__price--empty {
     height: 80px;
+    width: 63px;
   }
 }
 .dish-card__inner__price__euros {
