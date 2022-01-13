@@ -64,7 +64,7 @@ ul {
   background-color: #f6f6f6;
 }
 
-/*permet au pointer de fonctionner au hover sur les pictos svg"*/
+/*permet au pointer de fonctionner au hover sur les pictos svg*/
 object {
   pointer-events: none;
 }
@@ -1101,7 +1101,7 @@ footer ul li a {
 
 .titraille__like {
   position: relative;
-  z-index: 99;
+  z-index: 0;
   right: 36px;
   height: 30px;
   width: 30px;
@@ -1112,33 +1112,61 @@ footer ul li a {
   }
 }
 
-.titraille__like:active,
 .titraille__like:hover {
   cursor: pointer;
-  z-index: 90;
 }
 
 @media all and (max-width: 992px) {
-  .titraille__like:active .titraille__like--fill {
+  .titraille__like:active::after {
     opacity: 1;
   }
 }
-@media all and (min-width: 993px) {
-  .titraille__like:hover .titraille__like--fill {
+@media all and (min-width: 992px) {
+  .titraille__like:hover::after {
     opacity: 1;
   }
 }
-.titraille__like--fill {
-  position: absolute;
-  top: 0;
-  right: 0;
+.titraille__like::after {
+  content: url(../../images/pictos/heart-solid.svg);
   opacity: 0;
-  z-index: 10;
-  transition: opacity 500ms ease-in-out;
+  z-index: 0;
+  position: absolute;
   height: 30px;
   width: 30px;
+  top: 0;
+  left: 0;
+  transition: opacity 500ms ease-in-out;
 }
 
+@media all and (max-width: 992px) {
+  .titraille__like:active {
+    cursor: pointer;
+  }
+}
+/*
+.titraille__like:active,
+.titraille__like:hover {
+	cursor: pointer;
+	z-index: 99;
+}
+
+}
+@media all and (min-width: 993px) {
+	.titraille__like:hover .titraille__like--fill {
+		opacity: 1;
+	}
+}
+.titraille__like--fill {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	z-index: 10;
+	@include button-transition;
+	height: 30px;
+	width: 30px;
+}
+*/
 .interior-page h1 {
   padding-left: 15px;
   font-family: "Shrikhand", cursive;
