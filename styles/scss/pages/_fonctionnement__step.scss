@@ -11,7 +11,7 @@
 	}
 }
 .step {
-	width: $step-width;
+	width: $step-total-width;
 	height: $step-height;
 	position: relative;
 	z-index: 1;
@@ -22,7 +22,7 @@
 	margin-bottom: 20px;
 	word-wrap: break-word;
 	@media all and (min-width: 768px) {
-		width: $step-width-tablette;
+		width: $step-total-width-tablette;
 		height: $step-height-tablette;
 		margin-bottom: 0;
 		margin-right: 10px;

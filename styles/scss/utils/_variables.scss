@@ -13,22 +13,19 @@ $max-width-tablette: 750px;
 $max-width-desktop: 1280px;
 
 /*fonctionnement*/
+$step-total-width: 330px;
 $step-height: 75px;
 $step__number-width: 35px;
 $step__pic-width: 40px;
-$step__text-width: 330- ($step__number-width + $step__pic-width);
-$step-width: ($step__number-width + $step__pic-width + $step__text-width);
+$step__text-width: $step-total-width - ($step__number-width + $step__pic-width);
 
 /*fonctionnement tablette et desktop*/
+$step-total-width-tablette: 255px;
 $step-height-tablette: 75px;
 $step__number-width-tablette: 30px;
 $step__pic-width-tablette: 30px;
-$step__text-width-tablette: 255- ($step__number-width-tablette +
-			$step__pic-width-tablette);
-$step-width-tablette: (
-	$step__number-width-tablette + $step__pic-width-tablette +
-		$step__text-width-tablette
-);
+$step__text-width-tablette: $step-total-width-tablette -
+	($step__number-width-tablette + $step__pic-width-tablette);
 
 /*cards*/
 $card-image-height: 175px;

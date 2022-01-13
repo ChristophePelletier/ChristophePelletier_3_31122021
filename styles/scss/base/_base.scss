@@ -46,5 +46,7 @@ ul {
 	border-radius: 45px 45px 0 0;
 	background-color: $neutral;
 }
-
-object {pointer-events: none;}
+/*permet au pointer de fonctionner au hover sur les pictos svg"*/
+object {
+	pointer-events: none;
+}
