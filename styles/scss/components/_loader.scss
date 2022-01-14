@@ -38,20 +38,7 @@
 		opacity: 0;
 	}
 }
-@keyframes appear {
-	0% {
-		visibility: hidden;
-	}
-	97% {
-		visibility: hidden;
-		opacity: 0;
-		animation-timing-function: ease-in-out;
-	}
-	100% {
-		visibility: visible;
-		opacity: 1;
-	}
-}
+
 .loader__content {
 	margin-left: auto;
 	margin-right: auto;
@@ -64,6 +51,9 @@
 	@media all and (min-width: 768px) {
 		width: 700px;
 		height: 160px;
+	}
+	@media all and (max-width: 370px) {
+		width: 300px;
 	}
 	@include shadow($neutral-dark);
 	&__bck {
@@ -78,6 +68,9 @@
 		@media all and (min-width: 768px) {
 			width: 700px;
 			height: 160px;
+		}
+		@media all and (max-width: 370px) {
+			width: 300px;
 		}
 	}
 	&__circle {
@@ -95,6 +88,11 @@
 			left: -30px;
 			top: -200px;
 			animation: movement__circle__big__screen 2.5s ease-in-out both;
+		}
+		@media all and (max-width: 350px) {
+			left: -20px;
+			top: -115px;
+			animation: movement__circle__mini__screen 2.5s ease-in-out both;
 		}
 	}
 	&__ohmyfood-bck {
@@ -117,6 +115,9 @@
 			height: 80px;
 			width: 160px;
 			animation: scale__bck__big__screen 2.5s ease-in-out both;
+		}
+		@media all and (max-width: 370px) {
+			animation: scale__bck__mini__screen 2.5s ease-in-out both;
 		}
 	}
 	&__ohmyfood-txt {
@@ -143,32 +144,53 @@
 			font-size: 26px;
 			animation: movement__txt__big__screen 2.5s ease-in-out both;
 		}
+		@media all and (max-width: 370px) {
+			top: -80px;
+			left: -80px;
+			padding-left: 5px;
+			padding-top: 8px;
+			animation: movement__txt__mini__screen 2.5s ease-in-out both;
+		}
 	}
 }
 
-@media all and (min-width: 768px) {
-	@keyframes movement__circle__big__screen {
-		0% {
-			transform: translateX(-100px) scale(2, 2) rotate(0deg);
-		}
-		10% {
-			transform: translateX(-80px) scale(2, 2) rotate(180deg);
-		}
-		20% {
-			transform: translateX(-70px) scale(2, 2) rotate(360deg);
-		}
-		50% {
-			transform: translateX(-45px) scale(2, 2) rotate(720deg);
-		}
-		80% {
-			transform: translateX(200px) scale(2, 2) rotate(1000deg);
-		}
-		85% {
-			transform: translateX(320px) scale(3, 2) rotate(1430deg);
-		}
-		100% {
-			transform: translateX(520px) scale(2, 2) rotate(1430deg);
-		}
+/*keyframes mobiles*/
+@keyframes loader_after {
+	0% {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+	5% {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+	10% {
+		transform: scaleX($scale10pct);
+		opacity: 0.01;
+	}
+	20% {
+		transform: scaleX($scale20pct);
+		opacity: 0.01;
+	}
+	50% {
+		transform: scaleX($scale50pct);
+		opacity: 0.2;
+	}
+	80% {
+		transform: scaleX($scale80pct);
+		opacity: 0.5;
+	}
+	85% {
+		transform: scaleX($scale90pct);
+		opacity: 0.7;
+	}
+	90% {
+		transform: scaleX($scale100pct);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scaleX($scale100pct);
+		opacity: 1;
 	}
 }
 @keyframes fill {
@@ -201,27 +223,27 @@
 		opacity: 1;
 	}
 }
-@keyframes scale__bck {
+@keyframes movement__circle {
 	0% {
-		transform: translateX(-40px) scaleX(1);
+		transform: translateX(-100px) scaleX(1) rotate(0deg);
 	}
 	10% {
-		transform: translateX(-5px);
+		transform: translateX(-80px) rotate(180deg);
 	}
 	20% {
-		transform: translateX(10px) scaleX(1);
+		transform: translateX(-70px) scaleX(1) rotate(360deg);
 	}
 	50% {
-		transform: translateX(25px) scaleX(1);
+		transform: translateX(-45px) scaleX(1) rotate(720deg);
 	}
-	60% {
-		transform: translateX(200px) scaleX(1.8);
+	80% {
+		transform: translateX(100px) scaleX(2.5) rotate(1000deg);
 	}
-	85% {
-		transform: translateX(350px);
+	90% {
+		transform: translateX(160px) rotate(1430deg);
 	}
 	100% {
-		transform: translateX(350px);
+		transform: translateX(260px) rotate(1430deg);
 	}
 }
 @keyframes movement__txt {
@@ -247,27 +269,80 @@
 		transform: translateX(350px);
 	}
 }
-@keyframes movement__circle {
+@keyframes scale__bck {
 	0% {
-		transform: translateX(-100px) scaleX(1) rotate(0deg);
+		transform: translateX(-40px) scaleX(1);
 	}
 	10% {
-		transform: translateX(-80px) rotate(180deg);
+		transform: translateX(-5px);
 	}
 	20% {
-		transform: translateX(-70px) scaleX(1) rotate(360deg);
+		transform: translateX(10px) scaleX(1);
 	}
 	50% {
-		transform: translateX(-45px) scaleX(1) rotate(720deg);
+		transform: translateX(25px) scaleX(1);
 	}
-	80% {
-		transform: translateX(100px) scaleX(2.5) rotate(1000deg);
+	60% {
+		transform: translateX(200px) scaleX(1.8);
 	}
-	90% {
-		transform: translateX(160px) rotate(1430deg);
+	85% {
+		transform: translateX(350px);
 	}
 	100% {
-		transform: translateX(260px) rotate(1430deg);
+		transform: translateX(350px);
+	}
+}
+
+/*keyframes grands écrans*/
+@media all and (min-width: 768px) {
+	@keyframes movement__circle__big__screen {
+		0% {
+			transform: translateX(-100px) scale(2, 2) rotate(0deg);
+		}
+		10% {
+			transform: translateX(-80px) scale(2, 2) rotate(180deg);
+		}
+		20% {
+			transform: translateX(-70px) scale(2, 2) rotate(360deg);
+		}
+		50% {
+			transform: translateX(-45px) scale(2, 2) rotate(720deg);
+		}
+		80% {
+			transform: translateX(200px) scale(2, 2) rotate(1000deg);
+		}
+		85% {
+			transform: translateX(320px) scale(3, 2) rotate(1430deg);
+		}
+		100% {
+			transform: translateX(520px) scale(2, 2) rotate(1430deg);
+		}
+	}
+}
+/*keyframes écrans mini*/
+@media all and (max-width: 370px) {
+	@keyframes movement__circle__mini__screen {
+		0% {
+			transform: translateX(-100px) scaleX(1) rotate(0deg);
+		}
+		10% {
+			transform: translateX(-80px) rotate(180deg);
+		}
+		20% {
+			transform: translateX(-70px) scaleX(1) rotate(360deg);
+		}
+		50% {
+			transform: translateX(-45px) scaleX(1) rotate(720deg);
+		}
+		80% {
+			transform: translateX(100px) scaleX(2.5) rotate(1000deg);
+		}
+		90% {
+			transform: translateX(160px) rotate(1430deg);
+		}
+		100% {
+			transform: translateX(200px) rotate(1430deg);
+		}
 	}
 }
 @keyframes scale__bck__big__screen {
@@ -316,46 +391,58 @@
 		transform: translateX(700px);
 	}
 }
-
-@keyframes loader_after {
-	0% {
-		transform: scaleX(0);
-		opacity: 0;
+@media all and (max-width: 370px) {
+	@keyframes scale__bck__mini__screen {
+		0% {
+			transform: translateX(-40px) scaleX(1);
+		}
+		10% {
+			transform: translateX(-5px);
+		}
+		20% {
+			transform: translateX(10px) scaleX(1);
+		}
+		50% {
+			transform: translateX(25px) scaleX(1);
+		}
+		60% {
+			transform: translateX(200px) scaleX(1.8);
+		}
+		85% {
+			transform: translateX(300px);
+		}
+		100% {
+			transform: translateX(300px);
+		}
 	}
-	5% {
-		transform: scaleX(0);
-		opacity: 0;
-	}
-	10% {
-		transform: scaleX($scale10pct);
-		opacity: 0.01;
-	}
-	20% {
-		transform: scaleX($scale20pct);
-		opacity: 0.01;
-	}
-	50% {
-		transform: scaleX($scale50pct);
-		opacity: 0.2;
-	}
-	80% {
-		transform: scaleX($scale80pct);
-		opacity: 0.5;
-	}
-	85% {
-		transform: scaleX($scale90pct);
-		opacity: 0.7;
-	}
-	90% {
-		transform: scaleX($scale100pct);
-		opacity: 0.8;
-	}
-	100% {
-		transform: scaleX($scale100pct);
-		opacity: 1;
+}
+@media all and (max-width: 370px) {
+	@keyframes movement__txt__mini__screen {
+		0% {
+			transform: translateX(-40px);
+		}
+		10% {
+			transform: translateX(-5px);
+		}
+		20% {
+			transform: translateX(10px);
+		}
+		50% {
+			transform: translateX(25px);
+		}
+		60% {
+			transform: translateX(200px);
+		}
+		85% {
+			transform: translateX(300px);
+		}
+		100% {
+			transform: translateX(300px);
+		}
 	}
 }
 
+/*Apparition progressive du contenu de la page après le loader*/
 .index header,
 .location-form,
 .presentation,
@@ -363,4 +450,19 @@
 .restaurants,
 .index footer {
 	animation: appear 3s ease-in-out;
+}
+
+@keyframes appear {
+	0% {
+		visibility: hidden;
+	}
+	97% {
+		visibility: hidden;
+		opacity: 0;
+		animation-timing-function: ease-in-out;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
 }
