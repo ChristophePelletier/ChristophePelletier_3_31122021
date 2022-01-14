@@ -10,7 +10,7 @@
 	@include shadow($neutral);
 	z-index: 2;
 	@media all and (max-width: 370px) {
-		max-width: 300px;
+		max-width: 280px;
 	}
 	&:hover {
 		&::after {
@@ -29,7 +29,7 @@
 		@include shadow($tertiary-color);
 		@include card-transition;
 		@media all and (max-width: 370px) {
-			max-width: 300px;
+			max-width: 280px;
 		}
 	}
 	img {
@@ -40,7 +40,7 @@
 		border-radius: 15px 15px 0 0;
 		z-index: 50;
 		@media all and (max-width: 370px) {
-			max-width: 300px;
+			max-width: 280px;
 		}
 	}
 	
@@ -70,6 +70,9 @@
 			width: 335px;
 			height: $card-text-height;
 			padding-top: 10px;
+			@media all and (max-width: 370px) {
+				width: 260px;
+			}
 			p:first-child {
 				font-weight: bold;
 				font-size: 18px;
@@ -89,7 +92,8 @@
 			height: 25px;
 			width: 29px;
 			@media all and (max-width: 370px) {
-				margin-left: -75px;
+				margin-left: -15px;
+				top: 10px;
 			}
 			@media all and (max-width: 992px) {
 				&:active {

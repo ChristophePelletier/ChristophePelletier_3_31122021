@@ -53,6 +53,7 @@
 			text-overflow: ellipsis;
 			z-index: 50;
 			transform-origin: left;
+			background-color: white;
 			@include meal-transition;
 			@media all and (min-width: 992px), (max-width: 370px) {
 				width: 190px;
@@ -67,7 +68,7 @@
 			}
 		}
 		&__description {
-			width: 262px;
+			width: 260px;
 			height: 25px;
 			padding: 0 0 10px 10px;
 			font-size: 13px;
@@ -76,6 +77,7 @@
 			text-overflow: ellipsis;
 			word-break: normal;
 			transform-origin: left;
+			background-color: white;
 			z-index: 2;
 			@include meal-transition;
 			@media all and (min-width: 992px), (max-width: 370px) {
@@ -171,11 +173,11 @@
 			transform: translateY(20px);
 		}
 
-		#{$delai + $i*5.9%} {
+		#{$i*5.9%} {
 			opacity: 0;
 			transform: translateY(20px);
 		}
-		#{$delai+($i*5.9%) + 20%} {
+		#{($i*5.9%) + 20%} {
 			opacity: 1;
 			transform: translateY(0px);
 		}

@@ -4,11 +4,12 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	@media all and (min-width: 768px) {
-	}
 	img {
 		width: 170px;
 		padding-top: 15px;
+		@media all and (max-width: 370px) {
+			width: 150px;
+		}
 	}
 }
 .interior-page .head {
@@ -23,7 +24,7 @@ header {
 		height: 65px;
 		@media all and (min-width: 768px) {
 			justify-content: center;
-			}
+		}
 		&__logo {
 			width: 375px;
 			p {
@@ -76,8 +77,8 @@ header {
 			object-fit: cover;
 			padding-top: 0;
 			@media all and (min-width: 768px) {
-				position:relative;
-				display:inline-block;
+				position: relative;
+				display: inline-block;
 				width: 100%;
 				object-position: 50% 58%;
 			}

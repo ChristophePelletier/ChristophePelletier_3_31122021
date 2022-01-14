@@ -22,8 +22,7 @@ body {
 		background-color: $tertiary-color;
 	}
 	@media all and (max-width: 370px) {
-		width: $max-width-mini;
-		background-color: $tertiary-color;
+		max-width: $max-width-mini;
 	}
 }
 a {

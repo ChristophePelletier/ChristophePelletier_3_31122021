@@ -1,4 +1,4 @@
-/*.loader {
+.loader {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -10,7 +10,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: 5;
 		background-color: $tertiary-color;
 		opacity: 0;
 		width: 100%;
@@ -368,4 +367,3 @@
 .index footer {
 	animation: appear 3s ease-in-out;
 }
-*/
