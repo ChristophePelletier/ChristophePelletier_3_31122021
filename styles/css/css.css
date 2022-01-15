@@ -26,13 +26,13 @@ body {
 @media all and (min-width: 768px) {
   body {
     max-width: 750px;
-    background-color: cyan;
+    background-color: #ffcc99;
   }
 }
 @media all and (min-width: 993px) {
   body {
     max-width: 1280px;
-    background-color: cyan;
+    background-color: #ffcc99;
   }
 }
 @media all and (max-width: 370px) {
@@ -79,7 +79,7 @@ object {
   top: 0;
   left: 0;
   animation: appear-disappear 3s ease-in-out both;
-  background-color: black;
+  background-color: #994d00;
   width: 100%;
 }
 .loader::after {
@@ -87,7 +87,7 @@ object {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: cyan;
+  background-color: #ffcc99;
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -122,7 +122,7 @@ object {
   width: 350px;
   height: 80px;
   z-index: 8;
-  background-color: gold;
+  background-color: #990000;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 3px 6px #181818;
@@ -140,7 +140,7 @@ object {
 }
 .loader__content__bck {
   position: relative;
-  background-color: green;
+  background-color: #cccccc;
   width: 350px;
   height: 80px;
   z-index: 7;
@@ -166,7 +166,7 @@ object {
   height: 20px;
   left: -20px;
   top: -115px;
-  color: cyan;
+  color: #ffcc99;
   transform-origin: center center;
   z-index: 10;
   animation: movement__circle 2.5s ease-in-out both;
@@ -192,7 +192,7 @@ object {
   padding-top: 8px;
   height: 40px;
   width: 80px;
-  background-color: cyan;
+  background-color: #ffcc99;
   z-index: 20;
   animation: scale__bck 2.5s ease-in-out both;
   transform-origin: left;
@@ -564,7 +564,7 @@ object {
 .btn {
   position: relative;
   display: block;
-  background: linear-gradient(180deg, gold, green);
+  background: linear-gradient(180deg, #990000, #cccccc);
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
@@ -605,7 +605,7 @@ object {
   opacity: 0;
   border-radius: 25px;
   transition: opacity 500ms ease-in-out;
-  background: linear-gradient(180deg, #ffdb1a, #009a00);
+  background: linear-gradient(180deg, #b30000, #d9d9d9);
 }
 
 header {
@@ -786,7 +786,7 @@ footer ul li a {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  background-color: cyan;
+  background-color: #ffcc99;
   color: black;
   background-repeat: no-repeat;
   background-size: 14% 3px;
@@ -1319,7 +1319,7 @@ footer ul li a {
   margin-left: 15px;
   margin-bottom: 17px;
   padding-bottom: 7px;
-  background-image: linear-gradient(to right, cyan, cyan);
+  background-image: linear-gradient(to right, #ffcc99, #ffcc99);
   color: black;
   background-repeat: no-repeat;
   background-size: 14% 3px;
@@ -1339,7 +1339,7 @@ footer ul li a {
     margin-left: 15px;
     margin-bottom: 17px;
     padding-bottom: 7px;
-    background-image: linear-gradient(to right, cyan, cyan);
+    background-image: linear-gradient(to right, #ffcc99, #ffcc99);
     color: black;
     background-repeat: no-repeat;
     background-size: 20% 5px !important;
@@ -1395,7 +1395,7 @@ footer ul li a {
     margin-left: 15px;
     margin-bottom: 17px;
     padding-bottom: 7px;
-    background-image: linear-gradient(to right, cyan, cyan);
+    background-image: linear-gradient(to right, #ffcc99, #ffcc99);
     color: black;
     background-repeat: no-repeat;
     background-size: 10% 5px;
@@ -1479,7 +1479,7 @@ footer ul li a {
 }
 .step__number .centrage {
   color: white;
-  background-color: green;
+  background-color: #cccccc;
   margin-top: 25px;
   margin-left: -13px;
   width: 25px;
@@ -1544,7 +1544,7 @@ footer ul li a {
   left: 0;
   opacity: 0;
   border-radius: 30px/20px;
-  background-color: #24ff24;
+  background-color: white;
   box-shadow: 0 3px 6px #848484;
   transition: opacity 450ms ease-in-out;
   z-index: -10;
@@ -1669,7 +1669,7 @@ form input {
   }
 }
 form input:focus {
-  border: 3px solid green;
+  border: 3px solid #cccccc;
   border-radius: 5px;
   outline: 0;
   background-color: #eaeaea;
@@ -1696,7 +1696,7 @@ form button:hover .under {
   opacity: 1;
 }
 form button .under {
-  color: green;
+  color: #cccccc;
   opacity: 0;
   position: absolute;
   top: 15px;
@@ -1747,14 +1747,14 @@ form button .under {
 }
 .card::after {
   content: "";
-  background-color: cyan;
+  background-color: #ffcc99;
   border-radius: 15px;
   height: 255px;
   width: 335px;
   opacity: 0;
   z-index: 1;
   position: absolute;
-  box-shadow: 0 3px 6px #003333;
+  box-shadow: 0 3px 6px #cc6600;
   transition: opacity 450ms ease-in-out;
 }
 @media all and (max-width: 370px) {
@@ -1787,8 +1787,8 @@ form button .under {
   width: 80px;
   padding-top: 5px;
   text-align: center;
-  background-color: cyan;
-  color: black;
+  background-color: #ffcc99;
+  color: #994d00;
   font-weight: 500;
   font-size: 15px;
 }
