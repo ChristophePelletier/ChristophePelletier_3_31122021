@@ -5,7 +5,7 @@
 	transition: opacity 450ms ease-in-out;
 }
 @mixin meal-transition {
-	transition: all 675ms ease-in-out;
+	transition: transform, width, 675ms ease-in-out;
 }
 
 @mixin shadow($color: $neutral-dark) {

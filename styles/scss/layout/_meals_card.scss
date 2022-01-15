@@ -12,7 +12,11 @@
 		width: 300px;
 		height: 120px;
 	}
+	&:hover {
+		cursor: pointer;
+	}
 }
+
 .dish-card__inner {
 	display: flex;
 	justify-content: space-between;
@@ -43,7 +47,7 @@
 		}
 		&__title {
 			width: 260px;
-			height: 45px;
+			height: 40px;
 			padding-top: 15px;
 			padding-left: 10px;
 			padding-bottom: 15px;
@@ -69,9 +73,9 @@
 		}
 		&__description {
 			width: 260px;
-			height: 25px;
-			padding: 0 0 10px 10px;
-			font-size: 13px;
+			height: 30px;
+			padding: 0 0 12px 10px;
+			font-size: 17px;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -113,7 +117,7 @@
 		}
 		&__euros {
 			height: 35px;
-			padding-top: 9px;
+			padding-top: 6px;
 			background-color: white;
 			font-size: 16px;
 			font-weight: 700;
@@ -275,7 +279,7 @@
 	background-size: 14% 3px;
 	background-position: left bottom;
 }
-@media all and (min-width: 769px) and (max-width: 991px) {
+@media all and (min-width: 768px) and (max-width: 991px) {
 	.titraille h1 {
 		padding-right: 75px;
 	}

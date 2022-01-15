@@ -777,6 +777,9 @@ footer ul li a {
     height: 120px;
   }
 }
+.dish-card:hover {
+  cursor: pointer;
+}
 
 .dish-card__inner {
   display: flex;
@@ -814,7 +817,7 @@ footer ul li a {
 }
 .dish-card__inner__name__title {
   width: 260px;
-  height: 45px;
+  height: 40px;
   padding-top: 15px;
   padding-left: 10px;
   padding-bottom: 15px;
@@ -825,7 +828,7 @@ footer ul li a {
   z-index: 50;
   transform-origin: left;
   background-color: white;
-  transition: all 675ms ease-in-out;
+  transition: transform, width, 675ms ease-in-out;
 }
 @media all and (min-width: 992px), (max-width: 370px) {
   .dish-card__inner__name__title {
@@ -842,9 +845,9 @@ footer ul li a {
 }
 .dish-card__inner__name__description {
   width: 260px;
-  height: 25px;
-  padding: 0 0 10px 10px;
-  font-size: 13px;
+  height: 30px;
+  padding: 0 0 12px 10px;
+  font-size: 17px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -852,7 +855,7 @@ footer ul li a {
   transform-origin: left;
   background-color: white;
   z-index: 2;
-  transition: all 675ms ease-in-out;
+  transition: transform, width, 675ms ease-in-out;
 }
 @media all and (min-width: 992px), (max-width: 370px) {
   .dish-card__inner__name__description {
@@ -869,7 +872,7 @@ footer ul li a {
   width: 60px;
   height: 70px;
   background-color: white;
-  transition: all 675ms ease-in-out;
+  transition: transform, width, 675ms ease-in-out;
 }
 @media all and (min-width: 992px), (max-width: 370px) {
   .dish-card__inner__price {
@@ -892,7 +895,7 @@ footer ul li a {
 }
 .dish-card__inner__price__euros {
   height: 35px;
-  padding-top: 9px;
+  padding-top: 6px;
   background-color: white;
   font-size: 16px;
   font-weight: 700;
@@ -920,7 +923,7 @@ footer ul li a {
   left: 18px;
   top: 26px;
   z-index: 1000;
-  transition: all 675ms ease-in-out;
+  transition: transform, width, 675ms ease-in-out;
   transform: translate(0) rotate(0);
   transform-origin: 50% 50%;
 }
@@ -1326,7 +1329,7 @@ footer ul li a {
   background-position: left bottom;
 }
 
-@media all and (min-width: 769px) and (max-width: 991px) {
+@media all and (min-width: 768px) and (max-width: 991px) {
   .titraille h1 {
     padding-right: 75px;
   }
