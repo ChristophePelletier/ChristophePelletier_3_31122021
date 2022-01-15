@@ -1,8 +1,8 @@
 @mixin button-transition {
-	transition: opacity 500ms ease-in-out;
+	transition: opacity 350ms ease-in-out;
 }
 @mixin card-transition {
-	transition: opacity 450ms ease-in-out;
+	transition: opacity 300ms ease-in-out;
 }
 @mixin meal-transition {
 	transition: transform, width, 675ms ease-in-out;
