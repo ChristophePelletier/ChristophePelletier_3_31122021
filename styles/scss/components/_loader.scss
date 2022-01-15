@@ -4,6 +4,7 @@
 	left: 0;
 	animation: appear-disappear 3s ease-in-out forwards;
 	background-color: darken($tertiary-color, 50);
+	margin: 0;
 	width: 100vw;
 	&::after {
 		content: "";
@@ -151,7 +152,6 @@
 		}
 	}
 }
-
 
 @keyframes loader_after {
 	0% {

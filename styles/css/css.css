@@ -80,6 +80,7 @@ object {
   left: 0;
   animation: appear-disappear 3s ease-in-out forwards;
   background-color: #1b6150;
+  margin: 0;
   width: 100vw;
 }
 .loader::after {
@@ -1364,6 +1365,7 @@ footer ul li a {
 
   .dish-card__inner__name__description--big-height {
     height: 35px;
+    padding-top: 4px;
   }
 
   .dish-card__inner__price--empty--big-height {
