@@ -27,9 +27,6 @@
 	overflow: hidden;
 	background-color: $tertiary-color;
 	color: black;
-	background-repeat: no-repeat;
-	background-size: 14% 3px;
-	background-position: left bottom;
 	@media all and (min-width: 992px), (max-width: 370px) {
 		width: 300px;
 		height: 120px;

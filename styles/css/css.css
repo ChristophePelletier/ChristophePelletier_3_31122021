@@ -789,9 +789,6 @@ footer ul li a {
   overflow: hidden;
   background-color: #99e2d0;
   color: black;
-  background-repeat: no-repeat;
-  background-size: 14% 3px;
-  background-position: left bottom;
 }
 @media all and (min-width: 992px), (max-width: 370px) {
   .dish-card__inner {
