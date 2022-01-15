@@ -2,9 +2,9 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	animation: appear-disappear 3s ease-in-out both;
+	animation: appear-disappear 3s ease-in-out forwards;
 	background-color: darken($tertiary-color, 50);
-	width: 100%;
+	width: 100vw;
 	&::after {
 		content: "";
 		position: absolute;
@@ -12,9 +12,7 @@
 		left: 0;
 		background-color: $tertiary-color;
 		opacity: 0;
-		width: 100%;
-		height: 100%;
-		animation: loader_after 3s ease-in-out both;
+		animation: loader_after 3s ease-in-out forwards;
 		transform-origin: left;
 	}
 }
@@ -154,7 +152,7 @@
 	}
 }
 
-/*keyframes mobiles*/
+
 @keyframes loader_after {
 	0% {
 		transform: scaleX(0);
@@ -193,6 +191,7 @@
 		opacity: 1;
 	}
 }
+
 @keyframes fill {
 	0% {
 		transform: scaleX(0);
